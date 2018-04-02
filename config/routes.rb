@@ -4,8 +4,8 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   # Routes from project
-  resource :projects
+  resources :projects
 
   # routes from proposals
-  resource :proposals, except: :destroy
+  resources :proposals, except: :destroy
 end
