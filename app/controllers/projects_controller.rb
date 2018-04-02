@@ -14,7 +14,7 @@ class ProjectsController < ApplicationController
   def create
     @project = Project.new(user_params)
     if @project.save
-      redirect_to
+      redirect_to project_path
     else
       render :new
     end
@@ -24,9 +24,15 @@ class ProjectsController < ApplicationController
   end
 
   def update
+  if @project.update(user_params)
+    redirect_to project_path
+  else
+    render :edit
   end
 
   def destroy
+    @project.destroy
+      redirect_to projects_path
   end
 
   private
@@ -36,5 +42,6 @@ class ProjectsController < ApplicationController
   end
 
   def user_params
+    params.require(:project).permit()
   end
 end
