@@ -5,4 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
   has_many :projects
   has_many :proposals
+  validates :email, :password, :name, :phone, :birthday, :role, presence: true
+  validates :email, uniqueness: true
+
 end
