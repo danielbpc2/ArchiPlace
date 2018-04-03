@@ -1,0 +1,31 @@
+
+.btn{
+  border: none;
+  color: white;
+  margin: 10px;
+  &:hover{
+    color: white;
+    background-color: #F79463;
+  }
+}
+.btn-orange {
+  background-color: #E27A3F;
+}
+.btn-blue {
+  background-color: #182130;
+}
+
+.btn-home{
+  border: 1px outset #1d2735;
+  height:40px;
+  width:114px;
+  cursor:pointer;
+  color: white;
+  margin-top: 10px;
+  &:hover {
+    background-color: #182130;
+    color: #d2d6d9;
+  }
+}
+
+
