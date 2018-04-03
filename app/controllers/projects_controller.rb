@@ -1,5 +1,5 @@
 class ProjectsController < ApplicationController
-  before_action :set_project, only: [:show, :edit, :destroy]
+  before_action :set_project, only: [:show, :edit, :update, :destroy]
   before_action :set_user, only: [:create, :destroy]
 
   def index
@@ -17,7 +17,7 @@ class ProjectsController < ApplicationController
     @project = Project.new(user_params)
     @project.user = @user
     if @project.save
-      redirect_to project_path
+      redirect_to project_path(@project)
     else
       render :new
     end
@@ -28,7 +28,7 @@ class ProjectsController < ApplicationController
 
   def update
     if @project.update(user_params)
-      redirect_to project_path
+      redirect_to project_path(@project)
     else
       render :edit
     end
@@ -50,6 +50,6 @@ class ProjectsController < ApplicationController
   end
 
   def user_params
-    params.require(:project).permit(:title, :location, :description, :image, :room, :budget, :deadline, :user_id)
+    params.require(:project).permit(:title, :location, :description, :image, :image_cache, :room, :budget, :deadline, :user_id)
   end
 end
