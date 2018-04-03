@@ -4,7 +4,11 @@
 <%= f.input :description %>
 <%= f.input :image %>
 <%= f.input :image_cache, as: :hidden%>
-<%= f.input :room %>
+<%= f.input :room, collection:     [
+      'Bedroom', 'Kitchen', 'Bathroom', 'laundry room',
+      'Attic', 'Dressing room', 'Garage', 'Lounge',
+      'Dining room', 'Cellar', 'Basement','Boiler room', 'Living room'
+    ] %>
 <%= f.input :budget %>
 <%= f.input :deadline %>
 <%= f.submit %>
