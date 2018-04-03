@@ -1,0 +1,85 @@
+.card {
+  height: 175px;
+  background-color: #F0F0F0;
+  position: relative;
+  border-radius: 20px;
+  border: 1px solid #999999;
+  margin-top: 10px;
+}
+
+.card-header {
+  background-color: #182130;
+  height: 40px;
+  color: white;
+  padding-left: 10px;
+  display: flex;
+  justify-content: left; /* align horizontal */
+  align-items: center; /* align vertical */
+  border-radius: 20px 20px 0 0;
+  border: 1px solid #999999;
+}
+
+.card-roomlogo {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+.card-category {
+  padding-left: 10px;
+  font-size: 14px;
+  font-style: bold;
+  text-transform: uppercase;
+}
+
+.card-location {
+  position: absolute;
+  right: 40px;
+  font-size: 12px;
+}
+
+.card-description {
+  vertical-align: middle;
+  padding: 10px;
+  font-size: 12px;
+  text-align: center;
+  border-bottom: 1px solid #999999;
+}
+
+.card-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  z-index: 2;
+  background: black;
+  opacity: 0;
+}
+
+.card-link:hover {
+  opacity: 0.1;
+}
+
+.card-footer {
+  // background-color: #182130;
+  // border: 1px solid #999999;
+  color: black;
+  bottom: 0px;
+  width: 100%;
+  border-radius: 0 0 20px 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.card-footer-details-title {
+  font-size: 10px;
+  text-align: center;
+  padding-top: 5px;
+}
+
+.card-footer-details-content {
+  font-size: 14px;
+  text-align: center;
+  padding-bottom: 5px;
+ }
