@@ -1,2 +1,11 @@
-<h1>Projects#edit</h1>
-<p>Find me in app/views/projects/edit.html.erb</p>
+<%= simple_form_for(@project) do |f|%>
+<%= f.input :title %>
+<%= f.input :location %>
+<%= f.input :description %>
+<%= f.input :image %>
+<%= f.input :image_cache, as: :hidden%>
+<%= f.input :room %>
+<%= f.input :budget %>
+<%= f.input :deadline %>
+<%= f.submit %>
+<% end %>
