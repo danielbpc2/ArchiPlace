@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: [:show, :edit, :destroy]
-  before_action :set_user, only: [:create]
+  before_action :set_user, only: [:create, :destroy]
 
   def index
     @projects = Project.all
@@ -27,10 +27,11 @@ class ProjectsController < ApplicationController
   end
 
   def update
-  if @project.update(user_params)
-    redirect_to project_path
-  else
-    render :edit
+    if @project.update(user_params)
+      redirect_to project_path
+    else
+      render :edit
+    end
   end
 
   def destroy
@@ -49,7 +50,6 @@ class ProjectsController < ApplicationController
   end
 
   def user_params
-    params.require(:project).permit(:title, :location, :description, :image,
-      :room, :budget, :deadline, :user_id)
+    params.require(:project).permit(:title, :location, :description, :image, :room, :budget, :deadline, :user_id)
   end
 end
