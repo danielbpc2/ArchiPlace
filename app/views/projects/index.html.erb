@@ -2,3 +2,5 @@
 <% @projects.each do |project|  %>
 <li> <%= project.title %></li>
 <% end %>
+
+<%= link_to 'Create my project', new_project_path %>
