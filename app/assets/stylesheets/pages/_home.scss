@@ -12,32 +12,35 @@
   display: flex;
 }
 
-.banner-contet {
+.banner-content {
   text-align: center;
 }
 
-
-#project-index-banner {
-  background-color: #BCBEC0;
-  height: 150px;
-}
-
-#project-index-bar{
+#instruction-home {
   display: flex;
   justify-content: center;
-  background-color: #F0F0F0;
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.05);
-}
-#project-index-grid{
-  background-color: #FFF;
 }
 
-.test-card{
-  background-color: #F0F0F0;
-  height: 200px;
-  margin: 15px 5px;
+#img-publish-home {
+  background-image: url(https://use.fontawesome.com/releases/v5.0.9/svgs/solid/home.svg);
+  display: flex;
+  width: 50px;
+  height: 50px;
+  background-repeat: no-repeat;
 }
 
-#project-index{
-  background-color: #FFF;
+#img-receive-home {
+  background-image: url(https://use.fontawesome.com/releases/v5.0.9/svgs/solid/pencil-alt.svg);
+  display: flex;
+  width: 50px;
+  height: 50px;
+  background-repeat: no-repeat;
+}
+
+#img-build-home {
+  background-image: url(https://use.fontawesome.com/releases/v5.0.9/svgs/solid/gavel.svg);
+  display: flex;
+  width: 50px;
+  height: 50px;
+  background-repeat: no-repeat;
 }
