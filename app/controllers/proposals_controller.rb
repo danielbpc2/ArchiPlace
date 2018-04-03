@@ -3,7 +3,7 @@ class ProposalsController < ApplicationController
   before_action :set_user, only: [:create]
 
   def index
-    @proposals = Proposal.all
+    @proposals = Proposal.where(:user_id == current_user)
   end
 
   def show
