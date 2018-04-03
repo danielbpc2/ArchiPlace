@@ -6,3 +6,7 @@
   <p><%= proposal.image %></p>
   <p><%= proposal.status %></p>
 <% end %>
+
+<% if @proposals.nil? %>
+<%= "You don't have any proposals :(" %>
+<% end %>
