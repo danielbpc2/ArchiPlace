@@ -17,7 +17,7 @@ class ProjectsController < ApplicationController
     @project = Project.new(user_params)
     @project.user = @user
     if @project.save
-      redirect_to project_path
+      redirect_to user_project_path(@user.id)
     else
       render :new
     end
