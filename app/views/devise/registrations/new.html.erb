@@ -12,6 +12,7 @@
       <%= f.input :password_confirmation, required: true %>
       <%= f.input :name, required: true %>
       <%= f.input :phone, required: true %>
+      <%= f.label :birthday %>
       <%= f.date_field :birthday, required: true %>
       <%= f.input :role, required: true, as: :radio_buttons, collection: ['Owner', 'Arquitect'], wrapper: :vertical_radio_and_checkboxes %>
       <%= f.input :image %>
