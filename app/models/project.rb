@@ -18,4 +18,5 @@ class Project < ApplicationRecord
   validates :budget, presence: true
   validates :budget, numericality: { only_integer: true }
   validates :deadline, presence: true
+  validates :image, presence: true
 end
