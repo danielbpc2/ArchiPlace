@@ -14,6 +14,8 @@
       <%= f.input :phone, required: true %>
       <%= f.input :birthday, required: true, as: :date, start_year: Date.today.year - 100, end_year: Date.today.year - 0, order: [:month, :year, :day] %>
       <%= f.input :role, required: true, as: :radio_buttons, collection: ['Owner', 'Arquitect'], wrapper: :vertical_radio_and_checkboxes %>
+      <%= f.input :image %>
+      <%= f.input :image_cache, as: :hidden %>
     </div>
 
     <div class="form-actions">
