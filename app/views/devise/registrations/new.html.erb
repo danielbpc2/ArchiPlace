@@ -12,7 +12,7 @@
       <%= f.input :password_confirmation, required: true %>
       <%= f.input :name, required: true %>
       <%= f.input :phone, required: true %>
-      <%= f.input :birthday, required: true, as: :date, start_year: Date.today.year - 100, end_year: Date.today.year - 0, order: [:month, :year, :day] %>
+      <%= f.date_field :birthday, required: true %>
       <%= f.input :role, required: true, as: :radio_buttons, collection: ['Owner', 'Arquitect'], wrapper: :vertical_radio_and_checkboxes %>
       <%= f.input :image %>
       <%= f.input :image_cache, as: :hidden %>
@@ -26,4 +26,3 @@
   <%= render "devise/shared/links" %>
 
 </div>
-
