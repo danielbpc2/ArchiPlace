@@ -1,3 +1,8 @@
 <% @proposals.each do |proposal| %>
+  <p><%= proposal.project.title %></p>
   <p><%= proposal.price %></p>
+  <p><%= proposal.description %></p>
+  <p><%= proposal.duration %></p>
+  <p><%= proposal.image %></p>
+  <p><%= proposal.status %></p>
 <% end %>

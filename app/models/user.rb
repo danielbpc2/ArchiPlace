@@ -7,5 +7,6 @@ class User < ApplicationRecord
   has_many :proposals
   validates :email, :password, :name, :phone, :birthday, :role, presence: true
   validates :email, uniqueness: true
+  mount_uploader :image, PhotoUploader
 
 end

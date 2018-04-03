@@ -12,7 +12,7 @@ class ProposalsController < ApplicationController
     @proposal = Proposal.new
   end
 
-  def create
+  def created
     @proposal = Proposal.new(user_params)
     @proposal.user = current_user
     @proposal.project = @project
