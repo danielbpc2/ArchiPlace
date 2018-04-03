@@ -7,4 +7,5 @@ class Proposal < ApplicationRecord
   validates :price, numericality: { only_integer: true }
   validates :duration, presence: true
   validates :description, presence: true
+  validates :image, presence: true
 end
