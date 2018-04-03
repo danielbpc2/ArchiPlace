@@ -1,7 +1,6 @@
 class ProposalsController < ApplicationController
   before_action :set_proposal, only: [:show, :edit]
-  before_action :set_user, only: [:create]
-
+  before_action :set_project, only: [:new, :create]
   def index
     @proposals = Proposal.where(:user_id == current_user)
   end
@@ -16,8 +15,9 @@ class ProposalsController < ApplicationController
   def create
     @proposal = Proposal.new(user_params)
     @proposal.user = current_user
+    @proposal.project = @project
     if @proposal.save
-      redirect_to proposal_path, notice: 'Your proposal has been created!'
+      redirect_to project_proposal_path(@project, @proposal), notice: 'Your proposal has been created!'
     else
       render :new
     end
@@ -28,13 +28,17 @@ class ProposalsController < ApplicationController
 
   def update
     if @proposal.update(user_params)
-      redirect_to proposal_path, notice: 'Your proposal has been update!'
+      redirect_to project_proposal_path, notice: 'Your proposal has been update!'
     else
       render :edit
     end
   end
 
   private
+
+  def set_project
+    @project = Project.find(params[:project_id])
+  end
 
   def set_proposal
     @proposal = Proposal.find(params[:id])
