@@ -2,7 +2,7 @@ class ProposalsController < ApplicationController
   before_action :set_proposal, only: [:show, :edit]
   before_action :set_project, only: [:new, :create]
   def index
-    @proposals = Proposal.where(:user_id == current_user)
+    @proposals = Proposal.where(user_id: current_user)
   end
 
   def show

@@ -1,2 +1,3 @@
-<h1>Proposals#index</h1>
-<p>Find me in app/views/proposals/index.html.erb</p>
+<% @proposals.each do |proposal| %>
+  <p><%= proposal.price %></p>
+<% end %>
