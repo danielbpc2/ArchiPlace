@@ -1,6 +1,6 @@
 class ProposalsController < ApplicationController
-  before_action :set_proposal, only: [:show, :edit]
-  before_action :set_project, only: [:new, :create]
+  before_action :set_proposal, only: [:show, :edit, :update]
+  before_action :set_project, only: [:new, :create, :edit, :update]
   def index
     @proposals = Proposal.where(user_id: current_user)
   end
@@ -12,7 +12,7 @@ class ProposalsController < ApplicationController
     @proposal = Proposal.new
   end
 
-  def created
+  def create
     @proposal = Proposal.new(user_params)
     @proposal.user = current_user
     @proposal.project = @project
