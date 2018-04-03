@@ -47,3 +47,4 @@ class ProposalsController < ApplicationController
   def user_params
     params.require(:proposal).permit(:image, :price, :duration, :description, :project_id, :user_id, :status)
   end
+end
