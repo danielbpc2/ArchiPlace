@@ -1,2 +1,12 @@
-<h1>Proposals#index</h1>
-<p>Find me in app/views/proposals/index.html.erb</p>
+<% @proposals.each do |proposal| %>
+  <p><%= proposal.project.title %></p>
+  <p><%= proposal.price %></p>
+  <p><%= proposal.description %></p>
+  <p><%= proposal.duration %></p>
+  <p><%= proposal.image %></p>
+  <p><%= proposal.status %></p>
+<% end %>
+
+<% if @proposals.nil? %>
+<%= "You don't have any proposals :(" %>
+<% end %>

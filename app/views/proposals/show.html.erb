@@ -1,2 +1,5 @@
-<h1>Proposals#show</h1>
-<p>Find me in app/views/proposals/show.html.erb</p>
+<p><%= @project.title %></p>
+<p><%= @project.description %></p>
+<p><%= @proposal.description %></p>
+
+<%= link_to 'See my proposals', proposals_path %>

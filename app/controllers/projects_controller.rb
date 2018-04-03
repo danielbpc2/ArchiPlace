@@ -9,6 +9,10 @@ class ProjectsController < ApplicationController
   def show
   end
 
+  def myindex
+    @projects = Project.where(user: current_user)
+  end
+
   def new
     @project = Project.new
   end
@@ -17,7 +21,7 @@ class ProjectsController < ApplicationController
     @project = Project.new(user_params)
     @project.user = @user
     if @project.save
-      redirect_to project_path(@project)
+      redirect_to project_path(@project), notice: 'Your project has been created!'
     else
       render :new
     end
@@ -28,7 +32,7 @@ class ProjectsController < ApplicationController
 
   def update
     if @project.update(user_params)
-      redirect_to project_path(@project)
+      redirect_to project_path(@project), notice: 'Your project has been edited!'
     else
       render :edit
     end
