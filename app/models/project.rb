@@ -12,7 +12,7 @@ class Project < ApplicationRecord
     [
       'Bedroom', 'Kitchen', 'Bathroom', 'laundry room',
       'Attic', 'Dressing room', 'Garage', 'Lounge',
-      'Dining room', 'Cellar', 'Basement','Boiler room','Living room'
+      'Dining room', 'Cellar', 'Basement','Boiler room','Living room', 'Hall'
     ]
   }
   validates :budget, presence: true
