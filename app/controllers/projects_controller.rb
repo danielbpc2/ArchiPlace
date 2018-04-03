@@ -9,6 +9,10 @@ class ProjectsController < ApplicationController
   def show
   end
 
+  def myindex
+    @projects = Project.where(user: current_user)
+  end
+
   def new
     @project = Project.new
   end

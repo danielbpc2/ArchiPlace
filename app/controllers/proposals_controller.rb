@@ -1,11 +1,6 @@
 class ProposalsController < ApplicationController
-<<<<<<< HEAD
-  before_action :set_proposal, only: [:show, :edit]
-  before_action :set_project, only: [:new, :create, :show]
-=======
   before_action :set_proposal, only: [:show, :edit, :update]
-  before_action :set_project, only: [:new, :create, :edit, :update]
->>>>>>> ac91c1170ebafaa5e0b7197b6d7e7729a2bcb8b4
+  before_action :set_project, only: [:new, :create, :edit, :update, :show]
   def index
     @proposals = Proposal.where(user_id: current_user)
   end

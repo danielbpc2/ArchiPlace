@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   resources :projects, only: [:index, :new, :create, :destroy, :show, :edit, :update] do
     resources :proposals, only: [:show, :new, :create, :edit, :update]
   end
+  #route for current user projects
+  get '/myprojects', to: "projects#myindex", as: "myindex"
   # routes from proposals
   resources :proposals, only: [:index]
 end
