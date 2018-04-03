@@ -5,7 +5,12 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
   has_many :projects
   has_many :proposals
-  validates :email, :password, :name, :phone, :birthday, :role, presence: true
+  validates :email, presence: true
+  validates :name, presence: true
+  validates :phone, presence: true
+  validates :password, presence: true
+  validates :birthday, presence: true
+  validates :role, presence: true
   validates :email, uniqueness: true
   mount_uploader :image, PhotoUploader
 
