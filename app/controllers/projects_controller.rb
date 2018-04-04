@@ -1,7 +1,7 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: [:show, :edit, :update, :destroy]
   before_action :set_user, only: [:create, :destroy]
-
+  load_and_authorize_resource
   def index
     @projects = Project.all
   end
