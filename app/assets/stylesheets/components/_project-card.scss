@@ -1,10 +1,10 @@
 .project-card {
-  height: 175px;
+
   background-color: #F0F0F0;
   position: relative;
   border-radius: 20px;
   border: 1px solid #999999;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 .project-card-header {
@@ -44,6 +44,7 @@
   font-size: 12px;
   text-align: center;
   border-bottom: 1px solid #999999;
+  margin: 15px;
 }
 
 .project-card-link {
@@ -72,14 +73,45 @@
   justify-content: space-around;
 }
 
-.project-card-footer-details-title {
-  font-size: 10px;
-  text-align: center;
-  padding-top: 5px;
+  .project-card-footer-details {
+    p{
+      font-size: 12px;
+      text-align: center;
+      // padding-top: 5px;
+    }
+    h4 {
+    font-size: 14px;
+    text-align: center;
+    // padding-bottom: 5px;
+   }
 }
 
-.project-card-footer-details-content {
-  font-size: 14px;
-  text-align: center;
-  padding-bottom: 5px;
+.status-bar{
+      height: 10px;
+      background-color: $status-green;
+}
+
+.status-bar-in-progess{
+      height: 10px;
+      background-color: $status-yellow;
+}
+.status-bar-closed{
+      height: 10px;
+      background-color: $status-red;
+}
+
+
+ .open{
+  color: $status-green;
+ }
+
+  .in-progress{
+  color: $status-yellow;
+  background-color:$status-yellow;
+ }
+
+ .closed{
+  color: $status-red;
+  background-color:$status-red;
+
  }
