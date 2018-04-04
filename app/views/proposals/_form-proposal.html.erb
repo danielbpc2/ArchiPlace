@@ -1,7 +1,16 @@
 <%= simple_form_for([@project, @proposal]) do |f| %>
-<%= f.input :image %>
-<%= f.input :price %>
-<%= f.input :duration %>
-<%= f.input :description %>
-<%= f.submit %>
+<div class="container">
+<div class="row">
+  <div class="col-sm-8 col-sm-offset-2">
+    <div class="form-group">
+      <%= f.input :image, input_html: { class: ''}, hint: "A good render will help you get chosen more easily." %>
+      <%= f.input :description, hint: "Explain to your possible client your general ideas for their room." %>
+      <%= f.input :price, label: "Price R$", hint: "How much will you cost the client for your work?" %>
+      <%= f.input :image_cache, as: :hidden%>
+      <%= f.input :duration, hint: "How long will you take to deliver the final work?" %>
+      </div>
+    <div class="text-center"><%= f.submit class: "btn btn-orange" %></div>
+    </div>
+  </div>
+</div>
 <% end %>

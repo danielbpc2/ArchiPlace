@@ -1,15 +1,24 @@
-<%= simple_form_for(@project) do |f|%>
-<%= f.input :title %>
-<%= f.input :location %>
-<%= f.input :description %>
-<%= f.input :image %>
-<%= f.input :image_cache, as: :hidden%>
-<%= f.input :room, collection:     [
-      'Bedroom', 'Kitchen', 'Bathroom', 'laundry room',
-      'Attic', 'Dressing room', 'Garage', 'Lounge',
-      'Dining room', 'Cellar', 'Basement','Boiler room', 'Living room', 'Hall'
-    ] %>
-<%= f.input :budget %>
-<%= f.input :deadline %>
-<%= f.submit %>
+<%= simple_form_for @project, defaults: { input_html: { class: 'form-control' } } do |f| %>
+<div class="container">
+<div class="row">
+  <div class="col-sm-8 col-sm-offset-2">
+    <div class="form-group">
+      <%= f.input :title, hint: "Your project name" %>
+      <%= f.input :location, hint: "The city where your room is located"%>
+      <%= f.input :description %>
+      <%= f.input :image, input_html: { class: ''}, hint: "Try to take a wide angle shot of the room, with a good view of the space." %>
+      <%= f.input :image_cache, as: :hidden%>
+      <%= f.input :room, collection:     [
+            'Bedroom', 'Kitchen', 'Bathroom', 'laundry room',
+            'Attic', 'Dressing room', 'Garage', 'Lounge',
+            'Dining room', 'Cellar', 'Basement','Boiler room', 'Living room', 'Hall'
+          ] %>
+      <%= f.input :dimensions, hint: 'Dimensions are the size of the walls of your room. example: 4m x 5m x 4m x 5m', error: 'Dimensions are mandatory, please specify one' %>
+      <%= f.input :budget,label: "How much will it cost in R$", hint: "How much you are willing to pay for this project."%>
+      <%= f.input :deadline, hint: "Until when you need this project done?" %>
+      </div>
+    <div class="text-center"><%= f.submit class: "btn btn-blue" %></div>
+    </div>
+  </div>
+</div>
 <% end %>
