@@ -1,6 +1,73 @@
+<div id = "project-index"></div>
+<div class="row" id="project-index-banner">
+</div>
 
-<% @projects.each do |project|  %>
-<li> <%= project.title %></li>
-<% end %>
+<div class="row" id = "project-index-bar">
+  <%= link_to 'Create new project', new_project_path, class: 'btn btn-orange btn-project-index' %>
+</div>
 
-<%= link_to 'Create my project', new_project_path %>
+    <%= @projects.each do |project|  %>
+    <div class="col-md-4">
+      <div class="card test-card">
+        <div class="card-block">
+          <h4 class="card-title"><%= project.title %></h4>
+        </div>
+      </div>
+    </div>
+    <% end %>
+
+<div class="container">
+  <div class="row project-index-grid">
+
+    <div class="col-md-4">
+      <div class="card test-card">
+        <div class="card-block">
+          <h4 class="card-title">Title</h4>
+        </div>
+      </div>
+    </div>
+
+        <div class="col-md-4">
+      <div class="card test-card">
+        <div class="card-block">
+          <h4 class="card-title">Title</h4>
+        </div>
+      </div>
+    </div>
+
+        <div class="col-md-4">
+      <div class="card test-card">
+        <div class="card-block">
+          <h4 class="card-title">Title</h4>
+        </div>
+      </div>
+    </div>
+
+        <div class="col-md-4">
+      <div class="card test-card">
+        <div class="card-block">
+          <h4 class="card-title">Title</h4>
+        </div>
+      </div>
+    </div>
+
+        <div class="col-md-4">
+      <div class="card test-card">
+        <div class="card-block">
+          <h4 class="card-title">Title</h4>
+        </div>
+      </div>
+    </div>
+
+        <div class="col-md-4">
+      <div class="card test-card">
+        <div class="card-block">
+          <h4 class="card-title">Title</h4>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+</div>

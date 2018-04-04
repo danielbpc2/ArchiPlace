@@ -1,4 +1,4 @@
-.card {
+.project-card {
   height: 175px;
   background-color: #F0F0F0;
   position: relative;
@@ -7,7 +7,7 @@
   margin-top: 10px;
 }
 
-.card-header {
+.project-card-header {
   background-color: #182130;
   height: 40px;
   color: white;
@@ -19,26 +19,26 @@
   border: 1px solid #999999;
 }
 
-.card-roomlogo {
+.project-card-roomlogo {
   width: 25px;
   height: 25px;
   border-radius: 50%;
 }
 
-.card-category {
+.project-card-category {
   padding-left: 10px;
   font-size: 14px;
   font-style: bold;
   text-transform: uppercase;
 }
 
-.card-location {
+.project-card-location {
   position: absolute;
   right: 40px;
   font-size: 12px;
 }
 
-.card-description {
+.project-card-description {
   vertical-align: middle;
   padding: 10px;
   font-size: 12px;
@@ -46,7 +46,7 @@
   border-bottom: 1px solid #999999;
 }
 
-.card-link {
+.project-card-link {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -57,11 +57,11 @@
   opacity: 0;
 }
 
-.card-link:hover {
+.project-card-link:hover {
   opacity: 0.1;
 }
 
-.card-footer {
+.project-card-footer {
   // background-color: #182130;
   // border: 1px solid #999999;
   color: black;
@@ -72,13 +72,13 @@
   justify-content: space-around;
 }
 
-.card-footer-details-title {
+.project-card-footer-details-title {
   font-size: 10px;
   text-align: center;
   padding-top: 5px;
 }
 
-.card-footer-details-content {
+.project-card-footer-details-content {
   font-size: 14px;
   text-align: center;
   padding-bottom: 5px;

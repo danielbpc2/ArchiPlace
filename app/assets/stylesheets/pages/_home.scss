@@ -12,21 +12,35 @@
   display: flex;
 }
 
-.banner-contet {
+.banner-content {
   text-align: center;
 }
 
-.btn {
-  border: 1px outset #1d2735;
-  background-color: #182130;
-  height:40px;
-  width:114px;
-  cursor:pointer;
-  color: white;
-  margin-top: 10px;
+#instruction-home {
+  display: flex;
+  justify-content: center;
 }
 
-.btn:hover {
-  background-color: #182130;
-  color: #d2d6d9;
+#img-publish-home {
+  background-image: url(https://use.fontawesome.com/releases/v5.0.9/svgs/solid/home.svg);
+  display: flex;
+  width: 50px;
+  height: 50px;
+  background-repeat: no-repeat;
+}
+
+#img-receive-home {
+  background-image: url(https://use.fontawesome.com/releases/v5.0.9/svgs/solid/pencil-alt.svg);
+  display: flex;
+  width: 50px;
+  height: 50px;
+  background-repeat: no-repeat;
+}
+
+#img-build-home {
+  background-image: url(https://use.fontawesome.com/releases/v5.0.9/svgs/solid/gavel.svg);
+  display: flex;
+  width: 50px;
+  height: 50px;
+  background-repeat: no-repeat;
 }
