@@ -6,8 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 puts 'seeding'
-daniel = User.new(name: "Daniel", phone: 30383939, birthday: "09/10/1993", role: "Archtect", email: "danielbpc@hotmail.com", encrypted_password: "euahiueahicueih" )
-daniel.save(validate: false)
 projectseed = Project.new
 projectseed.title = "My project"
 projectseed.image = "eyjo6pxzse7ibiplnkrz"
