@@ -6,9 +6,8 @@
                   <div class="project-card-category"><%= project.room %></div>
                   <div class="project-card-location"><%= project.location %></div>
                 </div>
-                <%if project.status == "aberto" %>
+
                   <div class="status-bar" id= <%= project.status %> ></div>
-                <% end %>
 
                 <div class="project-card-description">
                   <p><%= project.description %></p>
