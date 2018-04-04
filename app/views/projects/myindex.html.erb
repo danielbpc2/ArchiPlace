@@ -1,3 +1,6 @@
 <% @projects.each do |project| %>
-  <p>project.title</p>
+  <p><%= project.title %></p>
 <% end %>
+
+<%= link_to 'Create new project', new_project_path, class: 'btn btn-orange btn-project-index' %>
+<p> <%= link_to 'Back to all projects', projects_path %> </p>
