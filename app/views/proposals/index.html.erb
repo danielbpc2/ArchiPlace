@@ -1,12 +1,22 @@
-<% @proposals.each do |proposal| %>
-  <p><%= proposal.project.title %></p>
-  <p><%= proposal.price %></p>
-  <p><%= proposal.description %></p>
-  <p><%= proposal.duration %></p>
-  <p><%= proposal.image %></p>
-  <p><%= proposal.status %></p>
-<% end %>
+<div id = "proposal-index"></div>
+<div class="row" id="proposal-index-banner">
+</div>
 
-<% if @proposals.nil? %>
-<%= "You don't have any proposals :(" %>
-<% end %>
+<div class="container">
+
+  <h1>Discover below all your proposals </h1>
+
+  <% @proposals.each do |proposal| %>
+    <%= render "shared/proposal-card", proposal: proposal %>
+  <% end %>
+
+  <% if @proposals.nil? %>
+    <%= "You don't have any proposals :(" %>
+  <% end %>
+
+</div>
+
+
+
+
+

@@ -39,4 +39,26 @@ projectseed3.deadline = "409 dias"
 projectseed3.room = "Kitchen"
 projectseed3.user = User.last
 projectseed3.save(validate: false)
+proposalseed = Proposal.new
+proposalseed.price = "100"
+proposalseed.duration = "10 days"
+proposalseed.description = "Great project to reform your flat"
+proposalseed.user_id = User.last
+proposalseed.project_id = Project.last
+proposalseed.save(validate: false)
+proposalseed2 = Proposal.new
+proposalseed2.price = "1500"
+proposalseed2.duration = "1 month"
+proposalseed2.description = "You will love this cosy layout for your room"
+proposalseed2.user_id = User.last
+proposalseed2.project_id = Project.last
+proposalseed2.save(validate: false)
+proposalseed3 = Proposal.new
+proposalseed3.price = "10000"
+proposalseed3.duration = "2 months"
+proposalseed3.description = "Very original design for your bathroom"
+proposalseed3.user_id = User.last
+proposalseed3.project_id = Project.last
+proposalseed3.save(validate: false)
+
 puts 'saved'
