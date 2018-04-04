@@ -10,9 +10,19 @@
 }
 .btn-orange {
   background-color: #E27A3F;
+  color: white;
+  text-decoration: none;
+  &:hover {
+    filter: brightness(80%);
+  }
 }
 .btn-blue {
   background-color: #182130;
+  color: white;
+  text-decoration: none;
+  &:hover {
+    filter: brightness(80%);
+  }
 }
 
 .btn-home{
