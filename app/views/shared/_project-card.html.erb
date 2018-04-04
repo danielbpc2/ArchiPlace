@@ -6,9 +6,8 @@
                   <div class="project-card-category"><%= project.room %></div>
                   <div class="project-card-location"><%= project.location %></div>
                 </div>
-                <%if project.status == "aberto" %>
+
                   <div class="status-bar" id= <%= project.status %> ></div>
-                <% end %>
 
                 <div class="project-card-description">
                   <p><%= project.description %></p>
@@ -32,7 +31,7 @@
                       </h4>
                   </div>
                 </div>
-                <a class="project-card-link" href="#" ></a>
+                <%= link_to "", project_path(project), class: "project-card-link" %>
               </div>
       <% end %>
     </div>

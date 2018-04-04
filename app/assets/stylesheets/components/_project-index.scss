@@ -1,8 +1,13 @@
 #project-index-banner {
-  background-color: #BCBEC0;
+  background-image: url(https://images.unsplash.com/photo-1433840496881-cbd845929862?ixlib=rb-0.3.5&s=bdc0aac1824927521aa64c0b2878aa58&auto=format&fit=crop&w=2550&q=80);
+  background-repeat: no-repeat;
   height: 150px;
   width: 100%;
   margin: 0px;
+    h2 {
+      color: #f0f0f0;
+
+    }
 }
 
 #project-index-bar{

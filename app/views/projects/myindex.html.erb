@@ -1,6 +1,18 @@
-<% @projects.each do |project| %>
-  <p><%= project.title %></p>
-<% end %>
+<div id = "project-index"></div>
+<div class="row text-center" id="project-index-banner">
+  <h2>WELCOME TO YOUR REFURBISHMENT</h2>
+</div>
 
-<%= link_to 'Create new project', new_project_path, class: 'btn btn-orange btn-project-index' %>
-<p> <%= link_to 'Back to all projects', projects_path %> </p>
+<div class="row" id = "project-index-bar">
+  <%= link_to 'Create new project', new_project_path, class: 'btn btn-orange btn-project-index' %>
+</div>
+
+<div class="container">
+  <h1 class="text-center"> My projects</h1>
+  <hr>
+  <% @projects.each do |project|  %>
+  <%= render "shared/project-card", project: project %>
+  <% end %>
+
+</div>
+

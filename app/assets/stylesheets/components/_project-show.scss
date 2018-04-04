@@ -1,0 +1,36 @@
+#project-show-left-bar{
+  background-color: #DDDDDD;
+  color: $text-gray;
+  margin-top: 30px;
+  padding: 10px;
+  h6{
+  color: #909090;
+  }
+}
+
+#project-show-container{
+  background-color: white;
+  color: $text-gray;
+  margin-top: 30px;
+  padding: 0px;
+
+}
+
+#btn-tiny{
+  font-size: 12px;
+}
+
+#light-title{
+}
+
+#project-show-buttons{
+  display: flex;
+  justify-content: flex-start;
+}
+
+.project-thumbnails{
+  display: flex;
+  justify-content: flex-start;
+
+}
+
