@@ -6,15 +6,39 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 puts 'seeding'
+daniel = User.new(name: "Daniel", phone: 30383939, birthday: "09/10/1993", role: "Archtect", email: "danielbpc@hotmail.com", encrypted_password: "euahiueahicueih" )
+daniel.save(validate: false)
 projectseed = Project.new
 projectseed.title = "My project"
+projectseed.image = "eyjo6pxzse7ibiplnkrz"
 projectseed.location = "São Paulo"
 projectseed.dimensions = "4mx3mx4mx3m"
 projectseed.description = "This is my description, this is a test"
-projectseed.budget = "R$100,00"
+projectseed.budget = 100
 projectseed.deadline = "30 dias"
-projectseed.status = "Aberto"
-projectseed.room = "Quarto"
+projectseed.room = "Bedroom"
 projectseed.user = User.last
-projectseed.save
-puts 'saved'
+projectseed.save(validate: false)
+projectseed2 = Project.new
+projectseed2.title = "My project2"
+projectseed2.image = "eyjo6pxzse7ibiplnkrz"
+projectseed2.location = "RIO"
+projectseed2.dimensions = "5mx5m"
+projectseed2.description = "This is my cription, this is a test"
+projectseed2.budget = 200
+projectseed2.deadline = "40 dias"
+projectseed2.room = "Bathroom"
+projectseed2.user = User.last
+projectseed2.save(validate: false)
+projectseed3 = Project.new
+projectseed3.title = "My project3"
+projectseed3.image = "eyjo6pxzse7ibiplnkrz"
+projectseed3.location = "Recife"
+projectseed3.dimensions = "100mx10m"
+projectseed3.description = "cription, this is a test"
+projectseed3.budget = 20000
+projectseed3.deadline = "409 dias"
+projectseed3.room = "Kitchen"
+projectseed3.user = User.last
+projectseed3.save(validate: false)
+puts 'saved
