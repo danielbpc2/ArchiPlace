@@ -14,6 +14,7 @@
   text-decoration: none;
   &:hover {
     filter: brightness(120%);
+    color: white;
   }
 }
 .btn-blue {
@@ -22,11 +23,12 @@
   text-decoration: none;
   &:hover {
     filter: brightness(120%);
+    color: white;
   }
 }
 
 .btn-white {
-  background-color: white;
+  background-color: #ccc;
   color: #182130;
   text-decoration: none;
   &:hover {
