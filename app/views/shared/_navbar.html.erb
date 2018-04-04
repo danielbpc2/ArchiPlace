@@ -11,8 +11,9 @@
     <% if user_signed_in? %>
 
       <!-- Links when logged in -->
-      <%= link_to '<i class="fas fa-home"></i> Projects'.html_safe, my_projects_index_path, class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to '<i class="fas fa-comments"></i> Proposals'.html_safe, my_proposals_index_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to '<i class="fas fa-globe"></i> All Projects'.html_safe, projects_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to '<i class="fas fa-home"></i> My Projects'.html_safe, my_projects_index_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to '<i class="fas fa-comments"></i> My Proposals'.html_safe, my_proposals_index_path, class: "navbar-wagon-item navbar-wagon-link" %>
 
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
@@ -39,6 +40,7 @@
       </div>
     <% else %>
       <!-- Login link (when logged out) -->
+      <%= link_to t(".sign_in", default: "Sign up"), new_user_registration_path, class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
     <% end %>
   </div>
@@ -54,10 +56,11 @@
               <i class="fa fa-user"></i> <%= t(".profile", default: "Profile") %>
             <% end %>
         </li>
+        <li><%= link_to '<i class="fas fa-globe"></i> All Projects'.html_safe, projects_path, class: "navbar-wagon-item navbar-wagon-link" %></li>
         <li>
-          <%= link_to '<i class="fas fa-home"></i> Projects</a>'.html_safe, my_projects_index_path%>
+          <%= link_to '<i class="fas fa-home"></i> My Projects</a>'.html_safe, my_projects_index_path%>
         </li>
-        <li><%= link_to '<i class="fas fa-comments"></i> Proposals'.html_safe, my_proposals_index_path %></li>
+        <li><%= link_to '<i class="fas fa-comments"></i> My Proposals'.html_safe, my_proposals_index_path %></li>
         <li>
           <%= link_to destroy_user_session_path, method: :delete do %>
             <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
@@ -65,6 +68,7 @@
           </li>
           <% else %>
           <!-- links unloged -->
+        <li><%= link_to t(".sign_in", default: "Sign up"), new_user_registration_path, class: "navbar-wagon-item navbar-wagon-link" %></li>
         <li><%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %></li>
       </ul>
   <% end %>
