@@ -11,6 +11,14 @@
 }
 
 /* Logo */
+.navbar-wagon-brand {
+  color: white;
+  text-decoration: none;
+  &:hover {
+  color: white;
+  text-decoration: none;
+  }
+}
 .navbar-wagon-brand img {
   height: 40px;
 }
@@ -45,10 +53,13 @@
 .navbar-wagon-link {
   color: white;
   font-size: 14px;
+  text-decoration: none;
+  &:hover {
+  text-decoration: none;
+  }
 }
 .navbar-wagon-link:hover {
   color: #E27A3F;
-  text-decoration: none;
 }
 
 /* Dropdown menu */
