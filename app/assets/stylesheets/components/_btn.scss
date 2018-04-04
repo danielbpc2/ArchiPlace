@@ -27,6 +27,26 @@
   }
 }
 
+.btn-red {
+  background-color: $status-red;
+  color: white;
+  text-decoration: none;
+  &:hover {
+    filter: brightness(120%);
+    color: white;
+  }
+}
+
+.btn-edit {
+  background-color: $edit-blue;
+  color: white;
+  text-decoration: none;
+  &:hover {
+    filter: brightness(120%);
+    color: white;
+  }
+}
+
 .btn-white {
   background-color: #F4F4F4;
   color: #182130;

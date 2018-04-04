@@ -1,3 +1,17 @@
-<% @proposals.each do |proposal| %>
-  <p>proposal.title</p>
-<% end %>
+<div id = "proposal-index"></div>
+<div class="row" id="proposal-index-banner">
+</div>
+
+<div class="container">
+
+  <h1>Discover below all your proposals </h1>
+
+  <% @proposals.each do |proposal| %>
+    <%= render "shared/proposal-card", proposal: proposal %>
+  <% end %>
+
+  <% if @proposals.nil? %>
+    <%= "You don't have any proposals :(" %>
+  <% end %>
+
+</div>
