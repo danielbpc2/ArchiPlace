@@ -7,7 +7,8 @@
 </div>
 
 <div class="container">
-
+  <h1 class="text-center"> My projects</h1>
+  <hr>
   <% @projects.each do |project|  %>
   <%= render "shared/project-card", project: project %>
   <% end %>
