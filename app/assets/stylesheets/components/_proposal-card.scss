@@ -4,6 +4,7 @@
   border-radius: 20px;
   border: 1px solid #999999;
   margin-top: 15px;
+  height: 210px;
 }
 
 .proposal-card-header {
@@ -49,7 +50,8 @@
 
 .proposal-card-right {
    width: 80%;
-   margin-left: 20px;
+   margin-left: 40px;
+   margin-right: 40px;
 //   justify-content: left; /* align horizontal */
 //   align-items: center; /* align vertical */
 //   margin-left : 10px
@@ -63,7 +65,7 @@
 
 .proposal-card-description {
   padding-left: 10px;
-  font-size: 12px;
+  font-size: 16px;
   text-align: center;
   border-bottom: 1px solid #999999;
   margin: 15px;

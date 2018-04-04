@@ -22,7 +22,7 @@
       <%= link_to 'Edit my project', edit_project_path, class: "btn btn-edit", id: "btn-tiny"%>
       <%= link_to 'Delete project', project_path(@project), class: "btn btn-red", id: "btn-tiny" , method: :delete, data: { confirm: 'Are you sure?', } %>
     </div>
-    <div class="container">
+    <div>
 
       <h3><%= @project.title %></h3>
       <p><%= @project.description %></p>
@@ -37,15 +37,12 @@
       </div>
 
       <%= link_to 'Submit a design proposal', new_project_proposal_path(@project),class: "btn btn-orange btn-project-index"%>
-
-
-      <h3>Proposals submitted to this project: </h3>
-
-      <% @project.proposals.each do |proposal| %>
-      <%= render "shared/proposal-card", proposal: proposal %>
-
-
-  <% end %>
+      <div style="">
+        <h3>Proposals submitted to this project: </h3>
+        <% @project.proposals.each do |proposal|%>
+        <%= render "shared/proposal-card", proposal: proposal %>
+        <% end %>
+      </div>
     </div>
   </div>
 

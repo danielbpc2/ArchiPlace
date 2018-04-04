@@ -1,42 +1,43 @@
-<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-  <div class="proposal-card">
+<div class="row">
+  <div class="col-xs-12">
+    <div class="proposal-card">
 
-    <div class="proposal-card-header">
-      <img class="proposal-card-avatar" src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
-      <div class="proposal-card-username">Joao Fonseca</div>
-      <div class="proposal-card-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-    </div>
-
-    <div class="project-card-main">
-
-      <div class="proposal-card-left col-xs-4 col-sm-4 col-md-4 col-lg-4">
-        <div class="proposal-card-image">
-          <img class="proposal-card-image" src="https://images.unsplash.com/photo-1484101403633-562f891dc89a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8a3b12d469f015fa722a3e564a290466&auto=format&fit=crop&w=1953&q=80">
-        </div>
+      <div class="proposal-card-header">
+        <img class="proposal-card-avatar" src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
+        <div class="proposal-card-username">Joao Fonseca</div>
+        <div class="proposal-card-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
       </div>
 
-      <div class="proposal-card-right  col-xs-8 col-sm-8 col-md-8 col-lg-8">
+      <div class="project-card-main">
 
-        <div class="proposal-card-description">
-          <p><%= proposal.description %></p>
-        </div>
-
-        <div class="proposal-card-footer">
-          <div class="proposal-card-footer-details">
-            <h4>Timing</h4>
-            <p><%= proposal.duration %></p>
-          </div>
-
-          <div class="proposal-card-footer-details">
-            <h4>Offered price</h4>
-            <p>R$ <%= proposal.price %></p>
-          </div>
-
-          <div class="proposal-card-footer-details">
-            <h4>Add to favorites</h4>
-            <p><i class="fas fa-heart"></i></p>
+        <div class="proposal-card-left">
+          <div class="proposal-card-image">
+            <img class="proposal-card-image" src="https://images.unsplash.com/photo-1484101403633-562f891dc89a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8a3b12d469f015fa722a3e564a290466&auto=format&fit=crop&w=1953&q=80">
           </div>
         </div>
 
-    </div>
+        <div class="proposal-card-right">
+
+          <div class="proposal-card-description">
+            <p><%= proposal.description %></p>
+          </div>
+          <div class="proposal-card-footer">
+            <div class="proposal-card-footer-details">
+              <h4>Timing</h4>
+              <p><%= proposal.duration %></p>
+            </div>
+
+            <div class="proposal-card-footer-details">
+              <h4>Offered price</h4>
+              <p>R$ <%= proposal.price %></p>
+            </div>
+
+            <div class="proposal-card-footer-details">
+              <h4>Add to favorites</h4>
+              <p><i class="fas fa-heart"></i></p>
+            </div>
+          </div>
+
+      </div>
+  </div>
 </div>
