@@ -1,0 +1,137 @@
+.proposal-card {
+  background-color: #F0F0F0;
+  position: relative;
+  border-radius: 20px;
+  border: 1px solid #999999;
+  margin-top: 15px;
+}
+
+.proposal-card-header {
+  background-color: #182130;
+  height: 40px;
+  color: white;
+  padding-left: 10px;
+  display: flex;
+  justify-content: left; /* align horizontal */
+  align-items: center; /* align vertical */
+  border-radius: 20px 20px 0 0;
+  border: 1px solid #999999;
+}
+
+.proposal-card-avatar {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+.proposal-card-username {
+  padding-left: 10px;
+  font-size: 14px;
+  font-style: bold;
+}
+
+.proposal-card-rating {
+  position: absolute;
+  right: 40px;
+  font-size: 12px;
+  color: $orange;
+}
+
+.project-card-main {
+  display: flex;
+  justify-content: left; /* align horizontal */
+  align-items: center; /* align vertical */
+}
+
+.proposal-card-left {
+   width: 200px;
+}
+
+.proposal-card-right {
+   width: 80%;
+   margin-left: 20px;
+//   justify-content: left; /* align horizontal */
+//   align-items: center; /* align vertical */
+//   margin-left : 10px
+}
+
+.proposal-card-image {
+  height: 150px;
+  border-radius: 20px;
+  padding-top: 5px;
+}
+
+.proposal-card-description {
+  padding-left: 10px;
+  font-size: 12px;
+  text-align: center;
+  border-bottom: 1px solid #999999;
+  margin: 15px;
+}
+
+.proposal-card-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  z-index: 2;
+  background: black;
+  opacity: 0;
+}
+
+.proposal-card:hover {
+  filter: brightness(90%);
+}
+
+.proposal-card-footer {
+  color: black;
+  bottom: 0px;
+  width: 100%;
+  border-radius: 0 0 20px 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+  .proposal-card-footer-details {
+    p{
+      font-size: 12px;
+      text-align: center;
+      // padding-top: 5px;
+    }
+    h4 {
+    font-size: 14px;
+    text-align: center;
+    // padding-bottom: 5px;
+   }
+}
+
+.status-bar{
+      height: 10px;
+      background-color: $status-green;
+}
+
+.status-bar-in-progess{
+      height: 10px;
+      background-color: $status-yellow;
+}
+.status-bar-closed{
+      height: 10px;
+      background-color: $status-red;
+}
+
+
+ .open{
+  color: $status-green;
+ }
+
+  .in-progress{
+  color: $status-yellow;
+  background-color:$status-yellow;
+ }
+
+ .closed{
+  color: $status-red;
+  background-color:$status-red;
+
+ }
