@@ -58,13 +58,12 @@
   opacity: 0;
 }
 
-.project-card-link:hover {
-  opacity: 0.1;
+.project-card:hover {
+  filter: brightness(90%);
 }
 
 .project-card-footer {
-  // background-color: #182130;
-  // border: 1px solid #999999;
+
   color: black;
   bottom: 0px;
   width: 100%;
