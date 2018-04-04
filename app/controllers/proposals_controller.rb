@@ -5,6 +5,10 @@ class ProposalsController < ApplicationController
     @proposals = Proposal.where(user_id: current_user)
   end
 
+  def myindex
+    @proposals = Proposal.where(user: current_user)
+  end
+
   def show
   end
 
