@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 20180404115803) do
     t.string "room"
     t.integer "budget"
     t.string "deadline"
-    t.string "status", default: "aberto"
+    t.string "status", default: "open"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(version: 20180404115803) do
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "status", default: "Em analise"
+    t.string "status", default: "In analysis"
     t.index ["project_id"], name: "index_proposals_on_project_id"
     t.index ["user_id"], name: "index_proposals_on_user_id"
   end
