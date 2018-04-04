@@ -19,28 +19,32 @@
 #instruction-home {
   display: flex;
   justify-content: center;
+  margin-bottom: 26px;
+  margin-top: 30px;
 }
 
-#img-publish-home {
-  background-image: url(https://use.fontawesome.com/releases/v5.0.9/svgs/solid/home.svg);
-  display: flex;
-  width: 50px;
-  height: 50px;
-  background-repeat: no-repeat;
+.call-to-action {
+  margin-top: 60px;
+  background-color: #192230;
+  padding: 60px;
+  position: relative;
+  width: 100%;
 }
 
-#img-receive-home {
-  background-image: url(https://use.fontawesome.com/releases/v5.0.9/svgs/solid/pencil-alt.svg);
+.content-section {
+  text-align: center;
+  color: white;
   display: flex;
-  width: 50px;
-  height: 50px;
-  background-repeat: no-repeat;
+  align-items: center;
+  justify-content: space-between;
+    h2 {
+      margin-left: 80px;
+      flex-grow: 1;
+      margin-top: 0px;
+    }
+
+.btn-div {
+  margin-right: 300px;
 }
 
-#img-build-home {
-  background-image: url(https://use.fontawesome.com/releases/v5.0.9/svgs/solid/gavel.svg);
-  display: flex;
-  width: 50px;
-  height: 50px;
-  background-repeat: no-repeat;
 }
