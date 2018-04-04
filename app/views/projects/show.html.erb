@@ -1,10 +1,3 @@
-<p><%= @project.title %></p>
-<p><%= @project.location %></p>
-<p><%= @project.description %></p>
-<p><%= @project.image %></p>
-<p><%= @project.room %></p>
-<p><%= @project.budget %></p>
-<p><%= @project.deadline %></p>
 
 <%= link_to 'Edit my project', edit_project_path %>
 <p> <%= link_to 'Back to all projects', projects_path %> </p>
@@ -12,3 +5,18 @@
 <p>
 <%= link_to 'X', project_path(@project), method: :delete, data: { confirm: 'Are you sure?' } %>
 </p>
+
+<div class="container">
+  <div class="col-lg-3">
+
+    <p><%= @project.title %></p>
+    <p><%= @project.location %></p>
+    <p><%= @project.description %></p>
+    <p><%= @project.image %></p>
+    <p><%= @project.room %></p>
+    <p><%= @project.budget %></p>
+    <p><%= @project.deadline %></p>
+
+
+  </div>
+</div>
