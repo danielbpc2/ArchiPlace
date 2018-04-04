@@ -1,40 +1,40 @@
+<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+      <%=link_to "project/#{project.id}" do %>
+               <div class="project-card">
+                <div class="project-card-header">
+                  <img class="project-card-roomlogo" src="http://rutistica.com/images/bathroom-logo-12-image-gallery-tub-icon-512x512.jpg">
+                  <div class="project-card-category"><%= project.room %></div>
+                  <div class="project-card-location"><%= project.location %></div>
+                </div>
+                <%if project.status == "aberto" %>
+                  <div class="status-bar" id= <%= project.status %> ></div>
+                <% end %>
 
-
- <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-      <div class="project-card">
-        <div class="project-card-header">
-          <img class="project-card-roomlogo" src="http://rutistica.com/images/bathroom-logo-12-image-gallery-tub-icon-512x512.jpg">
-          <div class="project-card-category"><%= project.room %></div>
-          <div class="project-card-location"><%= project.location %></div>
-        </div>
-        <%if project.status == "aberto" %>
-          <div class="status-bar" id= <%= project.status %> ></div>
-        <% end %>
-
-        <div class="project-card-description">
-          <p><%= project.description %></p>
-        </div>
-        <div class="project-card-footer">
-          <div class="project-card-footer-details">
-            <h4>Dimension</h4>
-            <p><%= project.dimensions %></p>
-          </div>
-          <div class="project-card-footer-details">
-            <h4>Deadline</h4>
-            <p><%= project.deadline %></p>
-          </div>
-          <div class="project-card-footer-details">
-            <h4>Budget</h4>
-            <p>R$ <%= project.budget %></p>
-          </div>
-          <div class="project-card-footer-details">
-            <h4 class=<%=project.status%>>
-              <%= project.status %>
-              </h4>
-          </div>
-        </div>
-        <a class="project-card-link" href="#" ></a>
-      </div>
+                <div class="project-card-description">
+                  <p><%= project.description %></p>
+                </div>
+                <div class="project-card-footer">
+                  <div class="project-card-footer-details">
+                    <h4>Dimension</h4>
+                    <p><%= project.dimensions %></p>
+                  </div>
+                  <div class="project-card-footer-details">
+                    <h4>Deadline</h4>
+                    <p><%= project.deadline %></p>
+                  </div>
+                  <div class="project-card-footer-details">
+                    <h4>Budget</h4>
+                    <p>R$ <%= project.budget %></p>
+                  </div>
+                  <div class="project-card-footer-details">
+                    <h4 class=<%=project.status%>>
+                      <%= project.status %>
+                      </h4>
+                  </div>
+                </div>
+                <a class="project-card-link" href="#" ></a>
+              </div>
+      <% end %>
     </div>
 
 
