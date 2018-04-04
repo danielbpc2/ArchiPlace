@@ -41,4 +41,4 @@ projectseed3.deadline = "409 dias"
 projectseed3.room = "Kitchen"
 projectseed3.user = User.last
 projectseed3.save(validate: false)
-puts 'saved
+puts 'saved'
