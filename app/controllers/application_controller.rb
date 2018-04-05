@@ -3,7 +3,11 @@ class ApplicationController < ActionController::Base
   before_action :authenticate_user!, :configure_permitted_parameters, if: :devise_controller?
 
   rescue_from CanCan::AccessDenied do |exception|
-    redirect_back(fallback_location: root_path, alert: "(Error 403): Your account is not able to do this action.")
+    if user_signed_in?
+      redirect_back(fallback_location: root_path, alert: "(Error 403): Your account is not able to do this action.")
+    else
+      redirect_to new_user_registration_path
+    end
   end
 
   protected
