@@ -12,12 +12,15 @@
   background-color: white;
   color: $text-gray;
   margin-top: 30px;
-  padding: 0px;
+}
 
+#project-show-content{
+  padding: 30px;
 }
 
 #btn-tiny{
   font-size: 12px;
+  padding: 4px 4px;
 }
 
 #light-title{
@@ -29,8 +32,7 @@
 }
 
 .project-thumbnails{
-  display: flex;
-  justify-content: flex-start;
+
 
 }
 
