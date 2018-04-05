@@ -1,5 +1,4 @@
 .project-card {
-
   background-color: #F0F0F0;
   position: relative;
   border-radius: 20px;
@@ -34,17 +33,17 @@
 
 .project-card-location {
   position: absolute;
-  right: 40px;
+  right: 30px;
   font-size: 12px;
 }
 
 .project-card-description {
   vertical-align: middle;
   padding: 10px;
-  font-size: 12px;
+  font-size: 14px;
   text-align: center;
-  border-bottom: 1px solid #999999;
-  margin: 15px;
+  height: 70px;
+  border-bottom: 0.2px solid #999999;
 }
 
 .project-card-link {
@@ -63,7 +62,7 @@
 }
 
 .project-card-footer {
-
+  background-color: light-gray;
   color: black;
   bottom: 0px;
   width: 100%;
@@ -79,7 +78,7 @@
       // padding-top: 5px;
     }
     h4 {
-    font-size: 14px;
+    font-size: 12px;
     text-align: center;
     // padding-bottom: 5px;
    }
@@ -98,7 +97,6 @@
       height: 10px;
       background-color: $status-red;
 }
-
 
  .open{
   color: $status-green;
