@@ -1,30 +1,43 @@
-
-<div class="container">
+<div class="container" id="body-min-height">
+  <div class= "row center-column proposal-show-note">
+    <h3 class="light-title">Reviewing proposal for: <%= @proposal.project.title %></h3>
+</div>
   <div class="col-sm-2">
-    <div id="project-show-left-bar">
+    <div id="project-show-left-bar" class="center-column">
       <h6> Proposal number: </h6>
       <p id="proposal-number">#<%= @project.id %></p>
       <h6 light-title>Date submitted:</h6>
       <p><%= Date.today %></p>
-      <%= link_to 'Accept', new_project_path, class: 'btn btn-green' %>
+      <%= link_to 'Accept', change_project_status_path(@project), class: 'btn btn-green proposal-btn' %>
       <br>
-      <%= link_to 'Reject', new_project_path, class: 'btn btn-red' %>
+      <%= link_to 'Reject', new_project_path, class: 'btn btn-red proposal-btn' %>
+      <br>
+      <%= link_to 'Back', new_project_path, class: 'btn btn-blue proposal-btn' %>
     </div>
   </div>
-
-  <div class="col-sm-8 col-lg-8" id="project-show-container center-column">
-
-      <h6 light-title>Budget:</h6>
-      <p><%= @project.budget %></p>
-      <h6 light-title>Duration:</h6>
-      <p><%= @project.deadline %></p>
-
+  <div class="col-lg-10" id="project-show-container">
+    <table class="proposal-data">
+      <tr>
+        <td>
+          <h4 light-title>Budget:</h4>
+          <p>$ <%= @proposal.price %></p>
+        </td>
+        <td>
+          <h4 light-title>Duration:</h4>
+          <p><%= @proposal.duration %></p>
+        </td>
+        <td>
+          <h4 light-title>Submitted by:</h4>
+          <p><%= @proposal.user.name %></p>
+        </td>
+      </tr>
+    </table>
   </div>
-<p><%= @project.title %></p>
-<p><%= @project.description %></p>
-<p><%= @proposal.description %></p>
-
-<%= link_to 'See my proposals', proposals_path %>
-
-
+  <div class="col-lg-10" id="project-show-container">
+    <h3 light-title>Proposal images: </h3>
+    <p><%= cl_image_tag @proposal.image, class: "gallery-item img" %></p>
+    <h3 light-title>Detailed description: </h3>
+    <p><%= @proposal.description %></p>
+    <p><%= @proposal.description %></p>
+  </div>
 </div>
