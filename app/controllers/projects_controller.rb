@@ -3,6 +3,7 @@ class ProjectsController < ApplicationController
   before_action :set_user, only: [:create, :destroy]
   load_and_authorize_resource param_method: :user_params
   def index
+    @user ||= User.new
     @projects = Project.all
   end
 
