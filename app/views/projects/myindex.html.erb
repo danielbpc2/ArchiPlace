@@ -1,6 +1,6 @@
 <div id = "project-index"></div>
 <div class="row text-center" id="project-index-banner">
-  <h2>WELCOME TO YOUR REFURBISHMENT</h2>
+  <h2>Browse your own projects :</h2>
 </div>
 
 <div class="row" id = "project-index-bar">
@@ -8,11 +8,11 @@
 </div>
 
 <div class="container">
-  <h1 class="text-center"> My projects</h1>
   <hr>
   <% @projects.each do |project|  %>
   <%= render "shared/project-card", project: project %>
   <% end %>
-
+</div>
+<br>
 </div>
 
