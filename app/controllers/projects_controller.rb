@@ -1,5 +1,5 @@
 class ProjectsController < ApplicationController
-  before_action :set_project, only: [:show, :edit, :update, :destroy]
+  before_action :set_project, only: [:show, :edit, :update, :destroy, :change_status]
   before_action :set_user, only: [:create, :destroy]
   load_and_authorize_resource param_method: :user_params
   def index
@@ -44,6 +44,11 @@ class ProjectsController < ApplicationController
     redirect_to projects_path
   end
 
+  def change_status
+    @project.update!(status: "in-progress")
+    redirect_to project_path(@project)
+  end
+
   private
 
   def set_user
@@ -55,6 +60,6 @@ class ProjectsController < ApplicationController
   end
 
   def user_params
-    params.require(:project).permit(:title, :location, :dimensions, :description, :image, :image_cache, :room, :budget, :deadline, :user_id)
+    params.require(:project).permit(:title, :location, :dimensions, :description, :image, :image_cache, :room, :budget, :deadline, :user_id, :status)
   end
 end
