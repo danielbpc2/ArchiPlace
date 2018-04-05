@@ -4,7 +4,7 @@
                 <div class="project-card-header">
                   <img class="project-card-roomlogo" src="http://rutistica.com/images/bathroom-logo-12-image-gallery-tub-icon-512x512.jpg">
                   <div class="project-card-category"><%= project.room %></div>
-                  <div class="project-card-location"><%= project.location %></div>
+                  <div class="project-card-location"><%= project.location.upcase %></div>
                 </div>
 
                   <div class="status-bar" id= <%= project.status %> ></div>
@@ -26,9 +26,10 @@
                     <p>R$ <%= project.budget %></p>
                   </div>
                   <div class="project-card-footer-details">
-                    <h4 class=<%=project.status%>>
-                      <%= project.status %>
-                      </h4>
+                    <h4>Status</h4>
+                    <p class=<%=project.status%>>
+                      <%= project.status.upcase %>
+                      </p>
                   </div>
                 </div>
                 <%= link_to "", project_path(project), class: "project-card-link" %>
