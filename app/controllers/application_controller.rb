@@ -8,6 +8,6 @@ class ApplicationController < ActionController::Base
   end
 
   rescue_from CanCan::AccessDenied do |exception|
-     redirect_back(fallback_location: root_path, alert: "(Error 403): Your account is not able to do this action.")
+    redirect_back(fallback_location: root_path, alert: "(Error 403): Your account is not able to do this action.")
   end
 end
