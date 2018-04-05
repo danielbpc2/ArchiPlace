@@ -7,7 +7,7 @@
                   <div class="project-card-location"><%= project.location.upcase %></div>
                 </div>
 
-                  <div class="status-bar" id= <%= project.status %> ></div>
+                  <div class=<%="status-bar-#{project.status} "%> ></div>
 
                 <div class="project-card-description">
                   <p><%= project.description.truncate(100) %></p>
