@@ -1,5 +1,30 @@
+
+<div class="container">
+  <div class="col-sm-2">
+    <div id="project-show-left-bar">
+      <h6> Proposal number: </h6>
+      <p id="proposal-number">#<%= @project.id %></p>
+      <h6 light-title>Date submitted:</h6>
+      <p><%= Date.today %></p>
+      <%= link_to 'Accept', new_project_path, class: 'btn btn-green' %>
+      <br>
+      <%= link_to 'Reject', new_project_path, class: 'btn btn-red' %>
+    </div>
+  </div>
+
+  <div class="col-sm-8 col-lg-8" id="project-show-container center-column">
+
+      <h6 light-title>Budget:</h6>
+      <p><%= @project.budget %></p>
+      <h6 light-title>Duration:</h6>
+      <p><%= @project.deadline %></p>
+
+  </div>
 <p><%= @project.title %></p>
 <p><%= @project.description %></p>
 <p><%= @proposal.description %></p>
 
 <%= link_to 'See my proposals', proposals_path %>
+
+
+</div>
