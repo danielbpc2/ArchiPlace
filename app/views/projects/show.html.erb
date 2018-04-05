@@ -16,8 +16,10 @@
       <div class="flex.row" id="project-show-buttons">
 
         <%= link_to 'Back to all projects', projects_path, class: "btn btn-blue", id: "btn-tiny"%>
+        <% if @project.user == current_user %>
         <%= link_to 'Edit my project', edit_project_path, class: "btn btn-edit", id: "btn-tiny"%>
         <%= link_to 'Delete project', project_path(@project), class: "btn btn-red", id: "btn-tiny" , method: :delete, data: { confirm: 'Are you sure?', } %>
+        <% end %>
       </div>
       <div>
 
