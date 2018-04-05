@@ -22,7 +22,7 @@ class ProposalsController < ApplicationController
     @proposal.user = current_user
     @proposal.project = @project
     if @proposal.save
-      redirect_to project_proposal_path(@project, @proposal), notice: 'Your proposal has been created!'
+      redirect_to my_proposals_index_path(@proposal), notice: 'Your proposal has been created!'
     else
       render :new
     end
