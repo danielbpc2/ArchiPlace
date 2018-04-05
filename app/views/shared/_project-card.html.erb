@@ -10,7 +10,7 @@
                   <div class="status-bar" id= <%= project.status %> ></div>
 
                 <div class="project-card-description">
-                  <p><%= project.description %></p>
+                  <p><%= project.description.truncate(100) %></p>
                 </div>
                 <div class="project-card-footer">
                   <div class="project-card-footer-details">
