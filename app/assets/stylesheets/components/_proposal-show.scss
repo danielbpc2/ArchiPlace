@@ -4,9 +4,32 @@
   font-weight: bolder;
   margin-bottom: 0px;
   padding-bottom: 0px;
-
+  text-align: center
 }
 
-#center-column{
+
+
+.center-column{
   text-align: center;
+}
+
+.proposal-btn{
+  width: 100%;
+  margin-top: 20px;
+}
+
+.proposal-data{
+  width: 100%;
+  p{
+  font-size: 20px;
+  color: $status-green;
+  font-weight: normal;
+}
+}
+
+.proposal-show-note{
+  margin-top: 20px;
+  font-size: 20px;
+  color: $status-green;
+  font-weight: normal;
 }
