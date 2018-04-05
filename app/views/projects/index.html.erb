@@ -1,12 +1,12 @@
 <div id = "project-index"></div>
 <div class="row text-center" id="project-index-banner">
-<% if current_user.role == "Owner" %>
+<% if @user || current_user.role == "Owner"  %>
   <h2>WELCOME TO YOUR REFURBISHMENT</h2>
   <% else %>
   <h2>WELCOME TO YOUR NEXT BIG OPPORTUNITY</h2>
 <% end %>
 </div>
-<% if current_user.role == "Owner" %>
+<% if @user || current_user.role == "Owner" %>
 <div class="row" id = "project-index-bar">
   <%= link_to 'Create new project', new_project_path, class: 'btn btn-orange btn-project-index' %>
 </div>
