@@ -42,9 +42,37 @@
       flex-grow: 1;
       margin-top: 0px;
     }
+}
 
 .btn-div {
   margin-right: 200px;
 }
 
+.grid-photos {
+    width: 50%;
+    float: left;
+    padding: 15px;
 }
+
+.photo {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 300px;
+    display: block;
+    position: relative;
+}
+
+
+#effect {
+    position: absolute;
+    text-decoration: underline;
+    right: 5%;
+    bottom: 15px;
+    font-family: 'Oswald';
+    color: white;
+}
+
+
+
+
