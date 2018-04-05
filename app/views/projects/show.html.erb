@@ -1,50 +1,44 @@
-<div id="body-min-height">
-  <div class="container" >
+<div class="container" >
 
-    <div class="col-sm-3 col-lg-2">
-      <div id="project-show-left-bar">
-        <h6> Room type: </h6>
-        <p><%= @project.room %></p>
-        <h6 light-title>Location:</h6>
-        <p><%= @project.location %></p>
-        <h6 light-title>Budget:</h6>
-        <p><%= @project.budget %></p>
-        <h6 light-title>Duration:</h6>
-        <p><%= @project.deadline %></p>
-      </div>
+  <div class="col-sm-3 col-lg-2">
+    <div id="project-show-left-bar">
+      <h6> Room type: </h6>
+      <p><%= @project.room %></p>
+      <h6 light-title>Location:</h6>
+      <p><%= @project.location %></p>
+      <h6 light-title>Budget:</h6>
+      <p><%= @project.budget %></p>
+      <h6 light-title>Duration:</h6>
+      <p><%= @project.deadline %></p>
     </div>
+  </div>
+
     <div class="col-sm-9 col-lg-10" id="project-show-container">
       <div class="flex.row" id="project-show-buttons">
-
         <%= link_to 'Back to all projects', projects_path, class: "btn btn-blue", id: "btn-tiny"%>
         <% if @project.user == current_user %>
         <%= link_to 'Edit my project', edit_project_path, class: "btn btn-edit", id: "btn-tiny"%>
         <%= link_to 'Delete project', project_path(@project), class: "btn btn-red", id: "btn-tiny" , method: :delete, data: { confirm: 'Are you sure?', } %>
         <% end %>
       </div>
-      <div>
 
-        <h3><%= @project.title %></h3>
-        <p><%= @project.description %></p>
-        <%= cl_image_tag @project.image %>
-        <div class="project-thumbnails">
-          <img src="https://st.hzcdn.com/simgs/d002c19b05e08742_8-8059/home-design.jpg" style="height:80px;">
 
-          <img src="https://st.hzcdn.com/simgs/d002c19b05e08742_8-8059/home-design.jpg" style="height:80px;">
+          <div class="project-show-content">
+            <h3><%= @project.title %></h3>
+            <h6 light-title>Posted by:</h6>
+            <p><%= @project.description %></p>
 
-          <img src="https://st.hzcdn.com/simgs/d002c19b05e08742_8-8059/home-design.jpg" style="height:80px;">
+            <p><%= cl_image_tag @project.image, class: "gallery-item img" %>
+              <%= cl_image_tag @project.image, class: "gallery-item img" %>
+              <%= cl_image_tag @project.image, class: "gallery-item img" %></p>
+              <br>
+              <%= link_to 'Submit a design proposal', new_project_proposal_path(@project),class: "btn btn-orange btn-project-index"%>
 
-        </div>
-
-        <%= link_to 'Submit a design proposal', new_project_proposal_path(@project),class: "btn btn-orange btn-project-index"%>
-        <div style="">
-          <h3>Proposals submitted to this project: </h3>
-          <% @project.proposals.each do |proposal|%>
-          <%= render "shared/proposal-card", proposal: proposal %>
-          <% end %>
-        </div>
+              <h3>Proposals submitted to this project: </h3>
+              <% @project.proposals.each do |proposal|%>
+                <%= render "shared/proposal-card", proposal: proposal %>
+              <% end %>
       </div>
     </div>
   </div>
-</div>
 </div>

@@ -36,16 +36,18 @@
   color: white;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
     h2 {
-      margin-left: 80px;
       flex-grow: 1;
-      margin-top: 0px;
+      margin:0px;
+    }
+
+    .btn-div {
+      display: flex;
+      align-items: center;
     }
 }
 
-.btn-div {
-  margin-right: 200px;
 }
 
 .grid-photos {
@@ -71,6 +73,12 @@
     bottom: 15px;
     font-family: 'Oswald';
     color: white;
+
+@media screen and (max-width: 700px) {
+  .content-section{
+    display: block;
+  }
+
 }
 
 
