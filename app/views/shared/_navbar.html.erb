@@ -12,8 +12,12 @@
 
       <!-- Links when logged in -->
       <%= link_to '<i class="fas fa-globe"></i> All Projects'.html_safe, projects_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <% if current_user.role == "Owner" %>
       <%= link_to '<i class="fas fa-home"></i> My Projects'.html_safe, my_projects_index_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <% end %>
+      <% if current_user.role == "Professional" %>
       <%= link_to '<i class="fas fa-comments"></i> My Proposals'.html_safe, my_proposals_index_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <% end %>
 
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
@@ -58,10 +62,14 @@
             <% end %>
         </li>
         <li><%= link_to '<i class="fas fa-globe"></i> All Projects'.html_safe, projects_path, class: "navbar-wagon-item navbar-wagon-link" %></li>
+        <% if current_user.role == "Owner" %>
         <li>
           <%= link_to '<i class="fas fa-home"></i> My Projects</a>'.html_safe, my_projects_index_path%>
         </li>
+        <% end %>
+        <% if current_user.role == "Professional" %>
         <li><%= link_to '<i class="fas fa-comments"></i> My Proposals'.html_safe, my_proposals_index_path %></li>
+        <% end %>
         <li>
           <%= link_to destroy_user_session_path, method: :delete do %>
             <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
