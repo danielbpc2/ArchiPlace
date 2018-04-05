@@ -1,22 +1,22 @@
-<div id = "project-index"></div>
-<div class="row text-center" id="project-index-banner">
-<% if current_user.role == "Owner" %>
-  <h2>WELCOME TO YOUR REFURBISHMENT</h2>
-  <% else %>
-  <h2>WELCOME TO YOUR NEXT BIG OPPORTUNITY</h2>
-<% end %>
-</div>
-<% if current_user.role == "Owner" %>
-<div class="row" id = "project-index-bar">
-  <%= link_to 'Create new project', new_project_path, class: 'btn btn-orange btn-project-index' %>
-</div>
-<% end %>
-
-<div class="container">
-
-  <% @projects.each do |project|  %>
-  <%= render "shared/project-card", project: project %>
+<div id="body-min-height">
+  <div id = "project-index"></div>
+  <div class="row text-center" id="project-index-banner">
+    <% if @user || current_user.role == "Owner"  %>
+    <h2>Browse all projects</h2>
+    <% else %>
+    <h2>Find the best project to offer your services</h2>
+    <% end %>
+  </div>
+  <% if @user || current_user.role == "Owner" %>
+  <div class="row" id = "project-index-bar">
+    <%= link_to 'Add your own project', new_project_path, class: 'btn btn-orange btn-project-index' %>
+  </div>
   <% end %>
 
+  <div class="container">
+    <% @projects.each do |project|  %>
+    <%= render "shared/project-card", project: project %>
+    <% end %>
+  </div>
+  <br>
 </div>
-

@@ -15,14 +15,10 @@
           <%= f.input :image %>
           <%= f.input :image_cache, as: :hidden %>
         </div>
-        <div class="text-center">
+        <div class="text-center" style="margin-bottom: 20px;">
           <%= f.submit value: "Sign up", class: "btn btn-blue"%>
         </div>
       <% end %>
-      <div class="log-in text-center">
-      <p style="margin-top:12.5px;">Or</p>
-        <%= render "devise/shared/links" %>
-      </div>
     </div>
   </div>
 </div>

@@ -21,9 +21,10 @@
   background-color: #182130;
   color: white;
   text-decoration: none;
+  margin: 10px;
   &:hover {
     filter: brightness(120%);
-    color: white;
+    color: $orange;
   }
 }
 
@@ -37,15 +38,6 @@
   }
 }
 
-.btn-edit {
-  background-color: $edit-blue;
-  color: white;
-  text-decoration: none;
-  &:hover {
-    filter: brightness(120%);
-    color: white;
-  }
-}
 
 .btn-white {
   background-color: #F4F4F4;
@@ -59,7 +51,7 @@
 .btn-home{
   border: 1px outset #1d2735;
   height:40px;
-  width:114px;
+  width:150px;
   cursor:pointer;
   color: white;
   margin-top: 10px;
