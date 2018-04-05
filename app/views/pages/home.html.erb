@@ -2,7 +2,10 @@
   <div class="banner-content">
     <h1> <span id="banner-typed-text"></span></h1>
       <%= link_to "Discover all projects", projects_path, class: "btn btn-blue" %>
+      <% if user_signed_in? && current_user.role == "Professional"%>
+        <% else %>
       <%= link_to "Submit your own", new_project_path, class: "btn btn-orange" %>
+      <% end %>
   </div>
 </div>
 
