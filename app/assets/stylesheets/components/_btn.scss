@@ -19,6 +19,17 @@
   }
 }
 
+.btn-green {
+  background-color: $status-green;
+  color: white;
+  text-decoration: none;
+  // margin: 10px;
+  &:hover {
+    filter: brightness(120%);
+    color: white;
+  }
+}
+
 .btn-blue {
   background-color: #182130;
   color: white;
