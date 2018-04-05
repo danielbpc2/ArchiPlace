@@ -4,7 +4,7 @@
   border-radius: 20px;
   border: 1px solid #999999;
   margin-top: 15px;
-  height: 210px;
+  height: 190px;
 }
 
 .proposal-card-header {
@@ -44,31 +44,26 @@
   align-items: center; /* align vertical */
 }
 
-.proposal-card-left {
-   width: 200px;
-}
-
 .proposal-card-right {
-   width: 80%;
-   margin-left: 40px;
-   margin-right: 40px;
+   margin-left: 20px;
+   margin-right: 20px;
+   width: 70%;
 //   justify-content: left; /* align horizontal */
 //   align-items: center; /* align vertical */
 //   margin-left : 10px
 }
 
 .proposal-card-image {
-  height: 150px;
+  height: 130px;
   border-radius: 20px;
   padding-top: 5px;
+  margin-left: 10px;
 }
 
 .proposal-card-description {
-  padding-left: 10px;
   font-size: 16px;
   text-align: center;
   border-bottom: 0.2px solid #999999;
-  margin: 15px;
 }
 
 .proposal-card-link {
