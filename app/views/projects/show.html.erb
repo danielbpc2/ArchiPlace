@@ -1,17 +1,18 @@
-<div class="container" >
+<div id="body-min-height">
+  <div class="container" >
 
-  <div class="col-sm-3 col-lg-2">
-    <div id="project-show-left-bar">
-      <h6> Room type: </h6>
-      <p><%= @project.room %></p>
-      <h6 light-title>Location:</h6>
-      <p><%= @project.location %></p>
-      <h6 light-title>Budget:</h6>
-      <p><%= @project.budget %></p>
-      <h6 light-title>Duration:</h6>
-      <p><%= @project.deadline %></p>
+    <div class="col-sm-3 col-lg-2">
+      <div id="project-show-left-bar">
+        <h6> Room type: </h6>
+        <p><%= @project.room %></p>
+        <h6 light-title>Location:</h6>
+        <p><%= @project.location %></p>
+        <h6 light-title>Budget:</h6>
+        <p><%= @project.budget %></p>
+        <h6 light-title>Duration:</h6>
+        <p><%= @project.deadline %></p>
+      </div>
     </div>
-  </div>
     <div class="col-sm-9 col-lg-10" id="project-show-container">
       <div class="flex.row" id="project-show-buttons">
 
@@ -46,4 +47,4 @@
     </div>
   </div>
 </div>
-
+</div>
