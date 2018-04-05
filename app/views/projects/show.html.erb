@@ -5,7 +5,7 @@
       <h6> Room type: </h6>
       <p><%= @project.room %></p>
       <h6 light-title>Location:</h6>
-      <p><%= @project.location %></p>
+      <p><%= @project.location.capitalize %></p>
       <h6 light-title>Budget:</h6>
       <p><%= @project.budget %></p>
       <h6 light-title>Duration:</h6>
@@ -25,7 +25,7 @@
 
     <div class="project-show-content">
       <h3><%= @project.title %></h3>
-      <h6 light-title>Posted by:</h6>
+      <h6 light-title>Posted by: <%= @project.user.name %></h6>
       <p><%= @project.description %></p>
 
       <p><%= cl_image_tag @project.image, class: "gallery-item img" %>
