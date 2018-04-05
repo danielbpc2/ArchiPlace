@@ -6,11 +6,13 @@ class Ability
     #
       user ||= User.new # guest user (not logged in)
       if user.role == "Owner"
-        can :manage, Project
+        can :manage, Project, user_id: user.id
+        can :read, Project
         can :read, Proposal
       elsif user.role == "Professional"
+        can :read, Proposal
         can :read, Project
-        can :manage, Proposal
+        can :manage, Proposal, user_id: user.id
       else
       can :read, Project
       can :read, Proposal
