@@ -30,13 +30,12 @@
               <div class="altcard-action">
                 <span>Status: <strong><%= proposal.status %></strong></span>
               </div>
+              <%= link_to "", proposal_path(proposal), class: "project-card-link" %>
             </div>
           </div>
         </div>
       </div>
-
     </div>
   </div>
-  <%= link_to "", proposal_path(proposal), class: "project-card-link" %>
 </div>
 
