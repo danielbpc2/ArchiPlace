@@ -49,6 +49,11 @@ class ProjectsController < ApplicationController
     redirect_to project_path(@project)
   end
 
+  def archive
+    @project.update!(status: "closed")
+    redirect_to projects_path
+  end
+
   private
 
   def set_user
