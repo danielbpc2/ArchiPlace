@@ -10,6 +10,8 @@
       <p><%= @project.budget %></p>
       <h6 light-title>Duration:</h6>
       <p><%= @project.deadline %></p>
+      <h6 light-title>Published at:</h6>
+      <p><%= @project.created_at.localtime.strftime('%b %e, %l:%M %p') %></p>
     </div>
   </div>
 
@@ -32,7 +34,9 @@
         <%= cl_image_tag @project.image, class: "gallery-item img" %>
         <%= cl_image_tag @project.image, class: "gallery-item img" %></p>
         <br>
+        <% if current_user.role == "Professional" %>
         <%= link_to 'Submit a design proposal', new_project_proposal_path(@project),class: "btn btn-orange btn-project-index"%>
+        <% end %>
 
         <h3>Proposals submitted to this project: </h3>
         <% @project.proposals.each do |proposal|%>
