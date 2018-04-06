@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   # Routes from project
   resources :projects, only: [:index, :new, :create, :destroy, :show, :edit, :update] do
-    resources :proposals, only: [:show, :new, :create, :edit, :update]
+    resources :proposals, only: [ :new, :create, :edit, :update]
   end
   # update status for in progress
   patch '/projects/:id/change-status', to: "projects#change_status", as: "change_project_status"
@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   #route for current user projects
   get '/myprojects', to: "projects#myindex", as: "my_projects_index"
   # routes from proposals
-  resources :proposals, only: [:index]
+  resources :proposals, only: [:index, :show]
   # Route for current user proposals
   get '/myproposals', to: "proposals#myindex", as: "my_proposals_index"
 end

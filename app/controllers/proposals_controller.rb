@@ -1,6 +1,6 @@
 class ProposalsController < ApplicationController
   before_action :set_proposal, only: [:show, :edit, :update]
-  before_action :set_project, only: [:new, :create, :edit, :update, :show]
+  before_action :set_project, only: [:new, :create, :edit, :update]
   load_and_authorize_resource param_method: :user_params
   def index
     @proposals = Proposal.where(user_id: current_user)

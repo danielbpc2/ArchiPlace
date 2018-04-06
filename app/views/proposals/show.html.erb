@@ -8,7 +8,7 @@
       <p id="proposal-number">#<%= @proposal.orderid %></p>
       <h6 light-title>Date submitted:</h6>
       <p><%= @proposal.created_at.localtime.strftime('%b %e, %l:%M %p') %></p>
-      <%= link_to 'Accept', change_project_status_path(@project), method: :patch, class: 'btn btn-green proposal-btn' %>
+      <%= link_to 'Accept', change_project_status_path(@proposal.project), method: :patch, class: 'btn btn-green proposal-btn' %>
       <br>
       <%= link_to 'Reject', new_project_path, class: 'btn btn-red proposal-btn' %>
       <br>
