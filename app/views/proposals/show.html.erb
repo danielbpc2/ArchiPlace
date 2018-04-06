@@ -8,10 +8,12 @@
       <p id="proposal-number">#<%= @proposal.orderid %></p>
       <h6 light-title>Date submitted:</h6>
       <p><%= @proposal.created_at.localtime.strftime('%b %e, %l:%M %p') %></p>
-      <% if current_user.role == "Owner" && @proposal.project.user == current_user %>
-      <%= link_to 'Accept', change_project_status_path(@proposal.project), method: :patch, class: 'btn btn-green proposal-btn', id: "Acceptbutton" %>
-      <br>
-      <%= link_to 'Reject', proposal_path, method: :delete, data: {confirm: "are you sure?"}, class: 'btn btn-red proposal-btn' %>
+      <% if user_signed_in? %>
+        <% if current_user.role == "Owner" && @proposal.project.user == current_user %>
+        <%= link_to 'Accept', change_project_status_path(@proposal.project), method: :patch, class: 'btn btn-green proposal-btn' %>
+        <br>
+        <%= link_to 'Reject', proposal_path, method: :delete, data: {confirm: "are you sure?"}, class: 'btn btn-red proposal-btn' %>
+        <% end %>
       <% end %>
       <br>
       <%= link_to 'Back', project_path(@proposal.project), class: 'btn btn-blue proposal-btn' %>
@@ -22,7 +24,7 @@
       <tr>
         <td>
           <h4 light-title>Budget:</h4>
-          <p>$ <%= @proposal.price %></p>
+          <p style="color: green;">$ <%= @proposal.price %></p>
         </td>
         <td>
           <h4 light-title>Duration:</h4>

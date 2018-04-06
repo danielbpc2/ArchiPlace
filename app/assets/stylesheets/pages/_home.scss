@@ -23,12 +23,24 @@
   margin-top: 30px;
 }
 
+#carousel-title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 26px;
+  margin-top: 30px;
+  text-align: center;
+}
+
 .call-to-action {
   margin-top: 60px;
   background-color: #192230;
   padding: 60px;
   position: relative;
   width: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .content-section {
@@ -66,12 +78,13 @@
 
 #effect {
     position: absolute;
-    text-decoration: underline;
     right: 5%;
     bottom: 15px;
     font-family: 'Oswald';
-    color: white;
+    color: $brand-orange;
+    background-color: $brand-blue;
 }
+
 @media screen and (max-width: 700px) {
   .content-section{
     display: block;
@@ -86,3 +99,57 @@ p{
 }
 
 
+.carousel {
+  width:80%;
+  height:300px;
+}
+
+.carousel-control {
+  width: 15%;
+  opacity: 1;
+  vertical-align: middle;
+}
+
+.carousel-control.left {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+    background-repeat: repeat-x;
+}
+
+.carousel-control.right {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+    background-repeat: repeat-x;
+}
+
+.carousel-inner > .item > img {
+  width:540px;
+  height:300px;
+}
+
+.carousel-home {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin: 10px;
+  width: 50%;
+}
+
+.buttons {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.container-carousel {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.textcarousel {
+  text-align: center;
+  width: 50%;
+  margin: 10px;
+  padding: 20px;
+}
