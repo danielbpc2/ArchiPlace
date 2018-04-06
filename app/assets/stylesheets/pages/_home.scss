@@ -78,12 +78,13 @@
 
 #effect {
     position: absolute;
-    text-decoration: underline;
     right: 5%;
     bottom: 15px;
     font-family: 'Oswald';
-    color: white;
+    color: $brand-orange;
+    background-color: $brand-blue;
 }
+
 @media screen and (max-width: 700px) {
   .content-section{
     display: block;
@@ -99,13 +100,13 @@ p{
 
 
 .carousel {
-  width:540px;
+  width:80%;
   height:300px;
 }
 
 .carousel-control {
-  width: 5%;
-  opacity: 0.8;
+  width: 15%;
+  opacity: 1;
   vertical-align: middle;
 }
 
@@ -130,11 +131,25 @@ p{
   display: flex;
   padding-top: 20px;
   padding-bottom: 20px;
+  margin: 10px;
+  width: 50%;
 }
 
 .buttons {
   align-items: center;
   justify-content: center;
   display: flex;
+}
 
+.container-carousel {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.textcarousel {
+  text-align: center;
+  width: 50%;
+  margin: 10px;
+  padding: 20px;
 }
