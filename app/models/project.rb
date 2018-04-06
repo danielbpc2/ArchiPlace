@@ -10,9 +10,9 @@ class Project < ApplicationRecord
   validates :room, presence: true
   validates :room, inclusion: { in:
     [
-      'Bedroom', 'Kitchen', 'Bathroom', 'laundry room',
-      'Attic', 'Dressing room', 'Garage', 'Lounge',
-      'Dining room', 'Cellar', 'Basement','Boiler room','Living room', 'Hall'
+      'Bedroom', 'Kitchen', 'Bathroom', 'Laundry-room',
+      'Attic', 'Dressing-room', 'Garage', 'Lounge',
+      'Dining-room', 'Cellar', 'Basement','Boiler-room','Living-room', 'Hall'
     ]
   }
   validates :budget, presence: true
@@ -20,3 +20,4 @@ class Project < ApplicationRecord
   validates :deadline, presence: true
   validates :image, presence: true
 end
+
