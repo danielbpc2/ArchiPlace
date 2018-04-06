@@ -55,31 +55,46 @@
     <h2>Find some inspiration discovering other projects</h2>
   </div>
 
-  <div class="carousel-home">
+  <div class="container-carousel">
 
-  <div id="myCarousel" class="carousel slide" data-ride="carousel">
-  <!-- Wrapper for slides -->
-    <div class="carousel-inner">
-      <% @cards.each_with_index do |card,index| %>
-        <div class="item <%= 'active' if index == 0%>" data-slide-number="<%= index %>">
-          <%= image_tag card[:image] %>
-          <h2 id="effect">
-            <%= card[:title] %>
-          </h2>
-        </div>
-      <% end%>
-   </div>
-
-  <!-- Left and right controls -->
-  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#myCarousel" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right"></span>
-    <span class="sr-only">Next</span>
-  </a>
+    <div class="textcarousel">
+    <div id="img-publish-home" class="row">
+      <i class="fas fa-lightbulb fa-2x"></i>
+    </div>
+           <h4>Boost your imagination</h4>
+    <p>
+      <br>Browse thousands of existing styles
+      <br>Receive dozens of proposals
+      <br>Get inspiration from the best !
+    </p>
   </div>
+
+    <div class="carousel-home">
+
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+        <% @cards.each_with_index do |card,index| %>
+          <div class="item <%= 'active' if index == 0%>" data-slide-number="<%= index %>">
+            <%= image_tag card[:image] %>
+            <h2 id="effect">
+              <%= card[:title].capitalize %>
+            </h2>
+          </div>
+        <% end%>
+     </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+    </div>
+    </div>
   </div>
 
 </div>
