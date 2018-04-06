@@ -5646,6 +5646,10 @@ type-is@~1.6.15, type-is@~1.6.16:
     media-typer "0.3.0"
     mime-types "~2.1.18"
 
+type.js@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/type.js/-/type.js-0.0.1.tgz#566af8056e004a8e77fe75bdc4a09e8db6dfcd01"
+
 typed.js@^2.0.6:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/typed.js/-/typed.js-2.0.6.tgz#4e270f6fbc5e5e94a6c38fa29407c404745a7d61"
