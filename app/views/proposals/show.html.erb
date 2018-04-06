@@ -19,7 +19,7 @@
       <%= link_to 'Back', project_path(@proposal.project), class: 'btn btn-blue proposal-btn' %>
     </div>
   </div>
-  <div class="col-lg-10" id="project-show-container">
+  <div class="col-sm-10" id="project-show-container">
     <table class="proposal-data">
       <tr>
         <td>
@@ -37,7 +37,7 @@
       </tr>
     </table>
   </div>
-  <div class="col-lg-10" id="project-show-container">
+  <div class="col-sm-10" id="project-show-container">
     <h3 light-title>Proposal images: </h3>
     <p><%= cl_image_tag @proposal.image, class: "gallery-item img" %></p>
     <h3 light-title>Detailed description: </h3>
