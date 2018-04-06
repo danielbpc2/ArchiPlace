@@ -9,7 +9,7 @@
       <h6 light-title>Date submitted:</h6>
       <p><%= @proposal.created_at.localtime.strftime('%b %e, %l:%M %p') %></p>
       <% if current_user.role == "Owner" && @proposal.project.user == current_user %>
-      <%= link_to 'Accept', change_project_status_path(@proposal.project), method: :patch, class: 'btn btn-green proposal-btn' %>
+      <%= link_to 'Accept', change_project_status_path(@proposal.project), method: :patch, class: 'btn btn-green proposal-btn', id: "Acceptbutton" %>
       <br>
       <%= link_to 'Reject', proposal_path, method: :delete, data: {confirm: "are you sure?"}, class: 'btn btn-red proposal-btn' %>
       <% end %>
@@ -43,3 +43,15 @@
     <p><%= @proposal.description %></p>
   </div>
 </div>
+<script>
+  const userphone =  "<%= @proposal.user.phone %>"
+  const username =  "<%= @proposal.user.name %>"
+  document.getElementById('Acceptbutton').addEventListener('click', () => {
+    swal({
+      title: "One step closer to your refurbishment",
+      // title: "get in contact with him!"
+      text: `This is ${username} \n Phone:${userphone}`,
+      icon: "success",
+      buttons: [""]
+    })
+  });</script>

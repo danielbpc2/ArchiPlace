@@ -46,7 +46,7 @@ class ProjectsController < ApplicationController
 
   def change_status
     @project.update!(status: "in-progress")
-    redirect_to project_path(@project)
+    # redirect_to project_path(@project)
   end
 
   def archive
