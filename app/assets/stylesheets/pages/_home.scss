@@ -23,6 +23,14 @@
   margin-top: 30px;
 }
 
+#carousel-title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 26px;
+  margin-top: 30px;
+  text-align: center;
+}
+
 .call-to-action {
   margin-top: 60px;
   background-color: #192230;
@@ -32,6 +40,7 @@
   align-items: center;
   justify-content: center;
   display: flex;
+  flex-direction: column;
 }
 
 .content-section {
@@ -124,5 +133,8 @@ p{
 }
 
 .buttons {
-  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+
 }
