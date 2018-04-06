@@ -21,6 +21,7 @@ class ProposalsController < ApplicationController
     @proposal = Proposal.new(user_params)
     @proposal.user = current_user
     @proposal.project = @project
+    @proposal.orderid = @project.proposals.count + 1
     if @proposal.save
       redirect_to my_proposals_index_path(@proposal), notice: 'Your proposal has been created!'
     else
@@ -54,6 +55,6 @@ class ProposalsController < ApplicationController
   end
 
   def user_params
-    params.require(:proposal).permit(:image, :price, :duration, :description, :project_id, :user_id, :status)
+    params.require(:proposal).permit(:image, :price, :duration, :description, :project_id, :user_id, :status, :orderid)
   end
 end
