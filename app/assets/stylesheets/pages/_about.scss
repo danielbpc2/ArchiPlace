@@ -14,11 +14,13 @@
 
 .avatar-large {
   display: flex;
-  margin-left: 80px;
   width: 100px;
   border-radius: 50%;
 }
-
+.team-member {
+  // padding: 100px;
+  margin: 0px, 10px, 0px, 10px;
+}
 
 p{
   font-size: 16px;
