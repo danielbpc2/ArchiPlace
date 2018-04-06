@@ -1,5 +1,5 @@
 class ProposalsController < ApplicationController
-  before_action :set_proposal, only: [:show, :edit, :update]
+  before_action :set_proposal, only: [:show, :edit, :update, :destroy]
   before_action :set_project, only: [:new, :create, :edit, :update]
   load_and_authorize_resource param_method: :user_params
   def index
@@ -38,6 +38,11 @@ class ProposalsController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def destroy
+    @proposal.destroy
+    redirect_to project_path(@proposal.project)
   end
 
   private
