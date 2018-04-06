@@ -1,0 +1,169 @@
+.altcard{
+    position:relative;
+    margin:.5rem 0 1rem 0;
+    background-color:#fff;
+    -webkit-transition:-webkit-box-shadow .25s;
+    transition:-webkit-box-shadow .25s;
+    transition:box-shadow .25s;
+    transition:box-shadow .25s, -webkit-box-shadow .25s;
+    border-radius:2px
+}
+.altcard .altcard-title{
+    font-size:24px;
+    font-weight:300
+}
+.altcard .altcard-title.activator{
+    cursor:pointer
+}
+.altcard.small,.altcard.medium,.altcard.large{
+    position:relative
+}
+.altcard.small .altcard-image,.altcard.medium .altcard-image,.altcard.large .altcard-image{
+    max-height:60%;
+    overflow:hidden
+}
+.altcard.small .altcard-image+.altcard-content,.altcard.medium .altcard-image+.altcard-content,.altcard.large .altcard-image+.altcard-content{
+    max-height:40%
+}
+.altcard.small .altcard-content,.altcard.medium .altcard-content,.altcard.large .altcard-content{
+    max-height:100%;
+    overflow:hidden
+}
+.altcard.small .altcard-action,.altcard.medium .altcard-action,.altcard.large .altcard-action{
+    position:absolute;
+    bottom:0;
+    left:0;
+    right:0
+}
+.altcard.small{
+    height:300px
+}
+.altcard.medium{
+    height:400px
+}
+.altcard.large{
+    height:500px
+}
+.altcard.horizontal{
+    display:-webkit-box;
+    display:-webkit-flex;
+    display:-ms-flexbox;
+    display:flex
+}
+.altcard.horizontal.small .altcard-image,.altcard.horizontal.medium .altcard-image,.altcard.horizontal.large .altcard-image{
+    height:100%;
+    max-height:none;
+    overflow:visible
+}
+.altcard.horizontal.small .altcard-image img,.altcard.horizontal.medium .altcard-image img,.altcard.horizontal.large .altcard-image img{
+    height:100%
+}
+.altcard.horizontal .altcard-image{
+    max-width:50%
+}
+.altcard.horizontal .altcard-image img{
+    border-radius:2px 0 0 2px;
+    max-width:100%;
+    width:auto
+}
+.altcard.horizontal .altcard-stacked{
+    display:-webkit-box;
+    display:-webkit-flex;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-orient:vertical;
+    -webkit-box-direction:normal;
+    -webkit-flex-direction:column;
+    -ms-flex-direction:column;
+    flex-direction:column;
+    -webkit-box-flex:1;
+    -webkit-flex:1;
+    -ms-flex:1;
+    flex:1;
+    position:relative
+}
+.altcard.horizontal .altcard-stacked .altcard-content{
+    -webkit-box-flex:1;
+    -webkit-flex-grow:1;
+    -ms-flex-positive:1;
+    flex-grow:1
+}
+.altcard.sticky-action .altcard-action{
+    z-index:2
+}
+.altcard.sticky-action .altcard-reveal{
+    z-index:1;
+    padding-bottom:64px
+}
+.altcard .altcard-image{
+    position:relative
+}
+.altcard .altcard-image img{
+    display:block;
+    border-radius:2px 2px 0 0;
+    position:relative;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    width:100%
+}
+.altcard .altcard-image .altcard-title{
+    color:#fff;
+    position:absolute;
+    bottom:0;
+    left:0;
+    max-width:100%;
+    padding:24px
+}
+.altcard .altcard-content{
+    padding:24px;
+    border-radius:0 0 2px 2px
+}
+.altcard .altcard-content p{
+    margin:0;
+    color:inherit
+}
+.altcard .altcard-content .altcard-title{
+    display:block;
+    line-height:32px;
+    margin-bottom:8px
+}
+.altcard .altcard-content .altcard-title i{
+    line-height:32px
+}
+.altcard .altcard-action{
+    position:relative;
+    background-color:inherit;
+    border-top:1px solid rgba(160,160,160,0.2);
+    padding:16px 24px
+}
+.altcard .altcard-action:last-child{
+    border-radius:0 0 2px 2px
+}
+.altcard .altcard-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating){
+    color:#ffab40;
+    margin-right:24px;
+    -webkit-transition:color .3s ease;
+    transition:color .3s ease;
+    text-transform:uppercase
+}
+.altcard .altcard-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating):hover{
+    color:#ffd8a6
+}
+.altcard .altcard-reveal{
+    padding:24px;
+    position:absolute;
+    background-color:#fff;
+    width:100%;
+    overflow-y:auto;
+    left:0;
+    top:100%;
+    height:100%;
+    z-index:3;
+    display:none
+}
+.altcard .altcard-reveal .altcard-title{
+    cursor:pointer;
+    display:block
+}

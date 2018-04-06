@@ -6,41 +6,37 @@
 			<div class="proposal-card-header">
 				<%= cl_image_tag proposal.user.image, class: "proposal-card-avatar" %>
 				<div class="proposal-card-username"><strong><%= proposal.user.name.upcase %></strong> (designer)</div>
-				<div class="proposal-card-rating">Designer rating : <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+				<div class="proposal-card-rating">Proposal: <%= proposal.orderid %></div>
 			</div>
 
 			<div class="project-card-main">
 
-					<div class="proposal-card-image">
-						<%= cl_image_tag proposal.image , class: "proposal-card-image" %>
-					</div>
+        <div class="col-xs-12">
+          <!--           <h2 class="header">Horizontal Card</h2> -->
+          <div class="altcard horizontal" id="transparent">
+            <div class="altcard-image" id="proposal-card-image">
+              <%= cl_image_tag proposal.image , class: "proposal-card-image" %>
+            </div>
+            <div class="altcard-stacked">
+              <div class="altcard-content">
+                <p><%= proposal.description.truncate(120) %></p>
+              </div>
+              <div class="altcard-action">
+                <span>Duration: <strong><%= proposal.duration %></strong></span>
+              </div>
+              <div class="altcard-action">
+                <span>Price: $ <strong><%= proposal.price%></strong></span>
+              </div>
+              <div class="altcard-action">
+                <span>Status: <strong><%= proposal.status %></strong></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-				<div class="proposal-card-right">
-
-					<div class="proposal-card-description">
-						<p><%= proposal.description.truncate(80) %></p>
-					</div>
-					<div class="proposal-card-footer">
-						<div class="proposal-card-footer-details">
-							<h4>Timing</h4>
-							<p><%= proposal.duration %></p>
-						</div>
-
-						<div class="proposal-card-footer-details">
-							<h4>Offered price</h4>
-							<p>R$ <%= proposal.price %></p>
-						</div>
-
-						<div class="proposal-card-footer-details">
-							<h4>Add to favorites</h4>
-							<p><i class="fas fa-heart"></i></p>
-						</div>
-					</div>
-
-			</div>
-	</div>
-</div>
+    </div>
+  </div>
   <%= link_to "", proposal_path(proposal), class: "project-card-link" %>
 </div>
 
-</div>
