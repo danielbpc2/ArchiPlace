@@ -9,6 +9,7 @@ class Ability
         can :manage, Project, user_id: user.id
         can :read, Project
         can :read, Proposal
+        can :destroy, Proposal
       elsif user.role == "Professional"
         can :read, Proposal
         can :read, Project
