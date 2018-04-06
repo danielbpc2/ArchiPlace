@@ -8,7 +8,7 @@
   align: center;
   text-align: center;
   background-color: white;
-  width: 200vh;
+  width: 100vh;
 }
 
 .avatar-large {
@@ -31,6 +31,12 @@ p{
 }
 
 .quad-team {
-  display: flex;
   margin-top: 40px;
 }
+
+@media screen and (min-width: 900px) {
+.quad-team {
+  display: flex;
+}
+}
+
