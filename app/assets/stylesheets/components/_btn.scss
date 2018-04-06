@@ -89,3 +89,16 @@
 }
 
 
+.swal-button {
+  margin-right: 185px;
+  border: 1px outset #1d2735;
+  height:40px;
+  background-color: #182130;
+  cursor:pointer;
+  color: white;
+  margin-top: 10px;
+  &:hover {
+    background-color: #182130;
+    color: #d2d6d9;
+  }
+}
