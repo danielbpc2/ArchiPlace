@@ -37,8 +37,11 @@
         <%= cl_image_tag @project.image, class: "gallery-item img" %>
         <%= cl_image_tag @project.image, class: "gallery-item img" %></p>
         <br>
+        <% if user_signed_in? %>
         <% if current_user.role == "Professional" %>
         <%= link_to 'Submit a design proposal', new_project_proposal_path(@project),class: "btn btn-orange btn-project-index"%>
+        <% end %>
+
         <% end %>
 
         <h3>Proposals submitted to this project: </h3>

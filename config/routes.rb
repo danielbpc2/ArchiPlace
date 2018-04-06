@@ -21,4 +21,5 @@ Rails.application.routes.draw do
   resources :proposals, only: [:index, :show, :destroy]
   # Route for current user proposals
   get '/myproposals', to: "proposals#myindex", as: "my_proposals_index"
+  get '/about', to: "pages#about", as: "about"
 end
