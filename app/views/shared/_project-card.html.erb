@@ -2,7 +2,7 @@
       <%=link_to "project/#{project.id}" do %>
                <div class="project-card">
                 <div class="project-card-header">
-                  <img class="project-card-roomlogo" src="http://rutistica.com/images/bathroom-logo-12-image-gallery-tub-icon-512x512.jpg">
+                  <img style= "height: 35px" src = <%=image_path "#{project.room}.png"%>>
                   <div class="project-card-category"><%= project.room %></div>
                   <div class="project-card-location"><%= project.location.upcase %></div>
                 </div>
