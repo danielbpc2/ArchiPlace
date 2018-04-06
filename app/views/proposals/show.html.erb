@@ -10,9 +10,9 @@
       <p><%= @proposal.created_at.localtime.strftime('%b %e, %l:%M %p') %></p>
       <%= link_to 'Accept', change_project_status_path(@proposal.project), method: :patch, class: 'btn btn-green proposal-btn' %>
       <br>
-      <%= link_to 'Reject', new_project_path, class: 'btn btn-red proposal-btn' %>
+      <%= link_to 'Reject', proposal_path, method: :delete, data: {confirm: "are you sure?"}, class: 'btn btn-red proposal-btn' %>
       <br>
-      <%= link_to 'Back', new_project_path, class: 'btn btn-blue proposal-btn' %>
+      <%= link_to 'Back', project_path(@proposal.project), class: 'btn btn-blue proposal-btn' %>
     </div>
   </div>
   <div class="col-lg-10" id="project-show-container">
