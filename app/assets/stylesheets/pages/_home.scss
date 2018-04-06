@@ -29,6 +29,9 @@
   padding: 60px;
   position: relative;
   width: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }
 
 .content-section {
@@ -86,3 +89,40 @@ p{
 }
 
 
+.carousel {
+  width:540px;
+  height:300px;
+}
+
+.carousel-control {
+  width: 5%;
+  opacity: 0.8;
+  vertical-align: middle;
+}
+
+.carousel-control.left {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+    background-repeat: repeat-x;
+}
+
+.carousel-control.right {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+    background-repeat: repeat-x;
+}
+
+.carousel-inner > .item > img {
+  width:540px;
+  height:300px;
+}
+
+.carousel-home {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.buttons {
+  display: inline-block;
+}
