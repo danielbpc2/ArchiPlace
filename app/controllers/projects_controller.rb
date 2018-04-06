@@ -4,7 +4,7 @@ class ProjectsController < ApplicationController
   load_and_authorize_resource param_method: :user_params
   def index
     @user ||= User.new(role: "Owner")
-    @projects = Project.all
+    @projects = Project.where(status: "open").order(created_at: :DESC)
   end
 
   def show
@@ -47,6 +47,11 @@ class ProjectsController < ApplicationController
   def change_status
     @project.update!(status: "in-progress")
     redirect_to project_path(@project)
+  end
+
+  def archive
+    @project.update!(status: "closed")
+    redirect_to projects_path
   end
 
   private

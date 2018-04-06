@@ -103,12 +103,12 @@
    }
 }
 
-.status-bar{
+.status-bar-open{
       height: 10px;
       background-color: $status-green;
 }
 
-.status-bar-in-progess{
+.status-bar-in-progress{
       height: 10px;
       background-color: $status-yellow;
 }
@@ -117,18 +117,11 @@
       background-color: $status-red;
 }
 
-
  .open{
   color: $status-green;
  }
 
-  .in-progress{
-  color: $status-yellow;
-  background-color:$status-yellow;
- }
-
  .closed{
   color: $status-red;
-  background-color:$status-red;
 
  }

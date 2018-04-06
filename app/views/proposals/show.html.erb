@@ -5,10 +5,10 @@
   <div class="col-sm-2">
     <div id="project-show-left-bar" class="center-column">
       <h6> Proposal number: </h6>
-      <p id="proposal-number">#<%= @project.id %></p>
+      <p id="proposal-number">#<%= @proposal.orderid %></p>
       <h6 light-title>Date submitted:</h6>
-      <p><%= Date.today %></p>
-      <%= link_to 'Accept', change_project_status_path(@project), class: 'btn btn-green proposal-btn' %>
+      <p><%= @proposal.created_at.localtime.strftime('%b %e, %l:%M %p') %></p>
+      <%= link_to 'Accept', change_project_status_path(@project), method: :patch, class: 'btn btn-green proposal-btn' %>
       <br>
       <%= link_to 'Reject', new_project_path, class: 'btn btn-red proposal-btn' %>
       <br>
