@@ -10,7 +10,7 @@
       <p><%= @proposal.created_at.localtime.strftime('%b %e, %l:%M %p') %></p>
       <% if user_signed_in? %>
         <% if current_user.role == "Owner" && @proposal.project.user == current_user %>
-        <%= link_to 'Accept', change_project_status_path(@proposal.project), method: :patch, class: 'btn btn-green proposal-btn' %>
+        <%= link_to 'Accept', change_project_status_path(@proposal.project), method: :patch, class: 'btn btn-green proposal-btn', id: "Acceptbutton" %>
         <br>
         <%= link_to 'Reject', proposal_path, method: :delete, data: {confirm: "are you sure?"}, class: 'btn btn-red proposal-btn' %>
         <% end %>
@@ -56,7 +56,8 @@
       title: "One step closer to your refurbishment",
       text: `Get in contact and talk about the details!!\nThis is ${username}'s phone number:\n${userphone}`,
       icon: "success",
-    }).then((value) => {
+    })
+    .then((value) => {
   window.location = `/projects/${project}`;
 });
   });</script>
