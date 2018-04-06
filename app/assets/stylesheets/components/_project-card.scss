@@ -84,7 +84,7 @@
    }
 }
 
-.status-bar{
+.status-bar-open{
       height: 10px;
       background-color: $status-green;
 }
@@ -108,6 +108,5 @@
 
  .closed{
   color: $status-red;
-  background-color:$status-red;
 
  }
