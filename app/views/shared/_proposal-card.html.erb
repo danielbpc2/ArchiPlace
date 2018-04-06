@@ -1,6 +1,6 @@
 <div class="row">
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-    <%=link_to "proposal/#{proposal.id}" do %>
+
 		<div class="proposal-card">
 
 			<div class="proposal-card-header">
@@ -40,7 +40,7 @@
 			</div>
 	</div>
 </div>
-  <%= link_to "", project_proposal_path(proposal), class: "project-card-link" %>
+  <%= link_to "", proposal_path(proposal), class: "project-card-link" %>
 </div>
-<% end %>
+
 </div>
