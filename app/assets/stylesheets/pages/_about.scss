@@ -1,0 +1,36 @@
+#about-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#about-container{
+  align: center;
+  text-align: center;
+  background-color: white;
+  width: 200vh;
+}
+
+.avatar-large {
+  display: flex;
+  margin-left: 80px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+
+p{
+  font-size: 16px;
+  font-weight: 400;
+  color: 666666;
+}
+
+#miguelzinho {
+  text-decoration: none;
+  color: #192230;
+}
+
+.quad-team {
+  display: flex;
+  margin-top: 40px;
+}
