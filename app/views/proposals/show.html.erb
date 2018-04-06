@@ -45,3 +45,18 @@
     <p><%= @proposal.description %></p>
   </div>
 </div>
+
+<!-- swol script pai -->
+<script>
+  const userphone =  "<%= @proposal.user.phone %>"
+  const username =  "<%= @proposal.user.name %>"
+  const project = "<%= @proposal.project_id %>"
+  document.getElementById('Acceptbutton').addEventListener('click', () => {
+    swal({
+      title: "One step closer to your refurbishment",
+      text: `Get in contact and talk about the details!!\nThis is ${username}'s phone number:\n${userphone}`,
+      icon: "success",
+    }).then((value) => {
+  window.location = `/projects/${project}`;
+});
+  });</script>
